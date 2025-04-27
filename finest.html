@@ -1,0 +1,862 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PURE FINEST Navigation</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: Arial, sans-serif;
+    }
+/*zoom in and zoom out effect*/
+.thumbnail {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  width: 100%;
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+
+.thumbnail:hover img {
+  transform: scale(1);
+}
+
+.thumbnail:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail div {
+  padding: 15px;
+  text-align: left;
+}
+
+.thumbnail h2 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.thumbnail p {
+  font-size: 14px;
+  color: #555;
+}
+/*End of zoom in and zoom out effect*/
+    nav {
+      background: white;
+      padding: 15px 20px;
+      position: relative;
+      z-index: 10;
+    }
+    .text-white{
+      color: white;
+    }
+    a.text-white{
+      text-decoration: none;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      flex-wrap: nowrap; /* Prevent wrapping */
+      min-height: 100px;  /* Maintain consistent height */
+    }
+
+    .brand {
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      height: 100px;
+      flex: 0 0 auto; /* Prevent logo from resizing */
+    }
+
+    .brand .logo{
+      height: 80px;
+      animation: spin 5s linear infinite;
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-30%);
+      z-index: 2;
+    }
+
+    .brand .text-logo {
+      width: 200px;
+      height: auto;
+      margin-top: auto;
+      z-index: 1;
+    }
+
+    @keyframes spin {
+      from { transform: translateX(-30%) rotate(0deg); }
+      to { transform: translateX(-30%) rotate(360deg); }
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      z-index: 100;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: black;
+      margin: 4px 0;
+    }
+
+    ul.nav {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 20px;
+    }
+
+    ul.nav li {
+      position: relative;
+    }
+
+    ul.nav li a {
+      color: black;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 150px;
+      background: #f9f9f9;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 99;
+    }
+
+    .dropdown-menu li a {
+      color: black;
+      padding: 10px;
+      display: block;
+      text-decoration: none;
+    }
+
+    li:hover .dropdown-menu {
+      display: block;
+    }
+
+    /* Banner */
+    .video-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .video-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 100px 1rem 60px;
+    }
+
+    .tagline-top {
+      font-style: italic;
+      color: black;
+      font-size: 2rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .logo-img {
+      width: 250px;
+      height: auto;
+      filter: brightness(0) invert(1);
+    }
+
+    .tagline-bottom {
+      color: black;
+      font-size: 30px;
+      font-weight: 900;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.7rem;
+    }
+
+    .orange-half-img {
+      width: 30px;
+      height: auto;
+    }
+
+    .container-relative {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .col-left img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .col-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .col-right h2 {
+      font-size: 2em;
+    }
+
+    .rotating-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 150px;
+      height: 150px;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    .rotating-image {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s ease-in-out;
+      display: block;
+    }
+
+    .rotating-label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+      color: white;
+      font-size: 1.2rem;
+      pointer-events: none;
+      text-align: center;
+      white-space: nowrap;
+    }
+    /*text decrease and increase*/
+    #vitalityText {
+      opacity: 0;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+/*Meta row*/
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #888;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.meta-left,
+.meta-right {
+  display: inline-block;
+}
+
+/*End of Meta row*/
+    /* Mobile */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      ul.nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: white;
+        padding: 10px 0;
+        display: none;
+        z-index: 9;
+      }
+
+      ul.nav.active {
+        display: flex;
+      }
+
+      ul.nav li a {
+        width: 100%;
+        padding: 10px 20px;
+      }
+
+      .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: #f0f0f0;
+        width: 100%;
+      }
+
+      li:hover .dropdown-menu {
+        display: none;
+      }
+
+      li.active .dropdown-menu {
+        display: block;
+      }
+
+      .tagline-top {
+        font-size: 1.5rem;
+        margin-top: -40px;
+      }
+
+      .logo-img {
+        width: 180px;
+      }
+
+      .orange-half-img {
+        width: 20px;
+      }
+
+      .rotating-wrapper {
+        width: 100px;
+        height: 100px;
+      }
+
+      .rotating-label {
+        display: block;
+        font-size: 1rem;
+        color: white;
+        background: rgba(0,0,0,0.5);
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+
+      .col-right h2 {
+        font-size: 1.5em;
+      }
+      .about-1{
+        padding-top: 200px;
+      }
+      #about{
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-container container">
+   <!---- <div class="brand">
+    <img src="./Assets/PFI_LOGO_SPIN_PNG-removebg-preview.png" alt="Logo" class="logo">
+      <img src="./Assets/blog4.png" alt="PURE FINEST" class="text-logo">
+    </div>-->
+    <div class="brand">
+      <a href="index.html" class="logo-link">
+        <img src="./Assets/PFI_LOGO_SPIN_PNG-removebg-preview.png" class="logo" alt="Spinning Logo">
+      </a>
+      <img src="/Assets/blog4.png" class="text-logo" alt="Text Logo" width="300px">
+    </div>
+    
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span><span></span><span></span>
+    </div>
+
+    <ul class="nav" id="main-nav">
+      <li style="text-decoration: underline;" class="who"><a href="brands.html">Brands</a></li>
+      <li><a href="#">Advocates</a></li>
+      <li class="dropdown who" style="text-decoration: underline;">
+        <a href="brands.html">Alcohol <i class="fa fa-caret-down"></i></a>
+        <ul class="dropdown-menu">
+          <li class="who"><a href="finest.html">Gin</a></li>
+          <li class="who"><a href="finest.html">Vodka</a></li>
+          <li class="who"><a href="finest.html">Wine</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Discovery <i class="fa fa-caret-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Ingredients</a></li>
+          <li><a href="#">Flavours</a></li>
+          <li><a href="#">Nutritional Facts</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- BANNER -->
+<section id="home-banner">
+  <video class="video-bg" src="./Assets/food-video-1.mp4" autoplay muted loop></video>
+  <div class="video-overlay"></div>
+
+  <div class="container content">
+    <div class="tagline-top">Yours Sincerely</div>
+    <img src="./Assets/logo-B-T5VAok.png" alt="PURE FINEST Logo" class="logo-img">
+    <div class="tagline-bottom">
+      Your Gateway <span style="color:#fff;">to</span> Natural <span style="color:#fff;">Vitality</span>
+      <img src="./Assets/orange-half.png" alt="Half Orange" class="orange-half-img">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION -->
+<section id="about" style="background-color:#fff; padding:150px 0;">
+  <div class="container container-relative">
+    <div class="row">
+      <div class="col-sm-6 col-right">
+        <h2>Healthiest Plant-Based Vitamin Sports & Vitality Natural Drink on Planet Earth... In A Can.</h2>
+        <p >Welcome to the Oasis of Purity and Future of Wellness! Introducing the Healthiest Plant-Based</p>
+      </div>
+      <div class="col-sm-6 col-left">
+        <img src="./Assets/finest-image-1.webp" alt="Finest Image">
+      </div>
+    </div>
+
+    <!-- Rotating SVG -->
+    <div class="rotating-wrapper">
+      <img src="./Assets/download-great-vitality.svg" alt="Great Vitality" id="rotatingSvg" class="rotating-image">
+      <div class="rotating-label">Great Vitality</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: Improved Layout for Final Two Columns -->
+<section id="about" style="background-color:#fff;margin-top:-300px;" class="about-1">
+    <div class="container">
+      <div class="row" style="display: flex; flex-wrap: wrap; align-items: center;">
+  
+        <div class="col-sm-6" style="display: flex; justify-content: center; align-items: center;">
+          <img src="./Assets/finest-image-3.webp" alt="" style="max-width: 100%; height: auto;">
+        </div>
+  
+        <div class="col-sm-6" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left; padding: 30px;">
+          <h1 style="font-weight: bold; margin-bottom: 20px;">Revitalize Your<br>Body, Mind and<br>Soul</h1>
+          <p style="font-size: 16px; line-height: 1.6;">
+            Crafted with natural ingredients, PureFinest® Natural Drinks help you push through mental and physical challenges and exertion.
+            It has a natural goodness, by using medicinal plants and herbs that our ancestors used throughout history to combat mental and physical stress.
+            Fuel your active lifestyle with the natural power of plants. Our beverage is crafted to boost your energy levels, enhance endurance, and promote overall vitality.
+            Whether you're an athlete, fitness enthusiast, or just someone looking to infuse more vitality into your daily routine, our drinks are your perfect companions.
+          </p>
+          <button type="button" style="margin-top: 20px; padding: 10px 20px; background-color: #000; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+            Meet Our Flavours
+          </button>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  <!-- End Section -->
+  <!-- SECTION: Improved Layout for Final Two Columns 3 -->
+<section id="about" style="background-color:#fff;padding-top:50px;" class="about-2">
+    <div class="container">
+      <div class="row" style="display: flex; flex-wrap: wrap; align-items: center;">
+  <div class="col-sm-6" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left; padding: 30px;">
+          <h1 style="font-weight: bold; margin-bottom: 20px;">Taste Me! Feel
+            Me!®</h1>
+          <p style="font-size: 16px; line-height: 1.6;">
+            "Taste Me! - Feel Me!" ® is not just a slogan; it's an invitation to embark on
+             a sensory journey with our beverage, designed to leave you feeling refreshed,
+              revitalized, and ready to take on the day. From the first sip to the last, our beverage promises an experience that will 
+            awaken your senses and leave you with a feeling of overall well-being. Taste the Goodness, Feel the Difference!
+          </p>
+          <button type="button" style="margin-top: 20px; padding: 10px 20px; background-color: #000; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+            Meet Our Flavours
+          </button>
+        </div>
+        <div class="col-sm-6" style="display: flex; justify-content: center; align-items: center;">
+            <img src="./Assets/finest-image-6.webp" alt="" style="max-width: 100%; height: auto;">
+          </div>
+      </div>
+    </div>
+  </section>
+
+ <!----- <section id="about" style="background-color:#fff;padding-top:50px;" class="about-2">
+    <div class="container">
+      <div class="row" style="display: flex; flex-wrap: wrap; align-items: center;">
+  <div class="col-sm-4" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left; padding: 30px;">
+         
+          <img src="./Assets/finest-confidence.webp" alt="">
+        </div>
+        <div class="col-sm-4" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left; padding: 30px;">
+          
+            <img src="./Assets/finest-nature.webp" alt="">
+          </div>
+        <div class="col-sm-4" style="display: flex; justify-content: center; align-items: center;">
+         
+            <img src="./Assets/finest-acerola.webp" alt="">
+          </div>
+      </div>
+    </div>
+  </section>-->
+ <!----- <section id="about" class="about-2" style="background-color:#fff; padding-top:50px;">
+    <div class="container">
+      <div class="row ">
+        <div class="col-sm-4 col-xs-12 thumbnail" style="padding: 30px; text-align: center;">
+          <img src="./Assets/finest-confidence.webp" alt="Confidence" class="img-responsive center-block">
+          <div><h2>Confident You: PureFinest®'s Well-Being Boost</h2><p>In a world where 
+            our well-being is both a journey and destination, PureFinest® Vitamin emerges as a beacon of empowerment, crafting</p></div>
+        </div>
+        <div class="col-sm-4 col-xs-12 thumbnail" style="padding: 30px; text-align: center;">
+          <img src="./Assets/finest-nature.webp" alt="Nature" class="img-responsive center-block">
+          <div><h2>PureFinest®: Aligned with Your Nature</h2><p>In our 
+            search for holistic health and wellness, the choices we make about the food and drink we consume play a critical role</p></div>
+        </div>
+        <div class="col-sm-4 col-xs-12 thumbnail" style="padding: 30px; text-align: center;">
+          <img src="./Assets/finest-acerola.webp" alt="Acerola" class="img-responsive center-block">
+          <div><h2>What is Acerola and Why is it Good for You?</h2><p>Have you 
+            ever heard of acerola? This extraordinary fruit, also known as Barbados cherry or West Indian cherry, is not just a</p></div>
+        </div>
+      </div>
+    </div>
+  </section>-->
+  <section id="about" class="about-2" style="background-color:#fff; padding-top:50px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 col-xs-12">
+          <div class="thumbnail">
+            <img src="./Assets/finest-confidence.webp" alt="Confidence" class="img-responsive">
+            <div>
+              <h2>Confident You: PureFinest®'s Well-Being Boost</h2>
+              <p>In a world where our well-being is both a
+                 journey and destination, PureFinest® Vitamin emerges as a beacon of empowerment, crafting</p>
+                 <div class="meta-row">
+                  <span class="meta-left">HEALTH</span>
+                  <span class="meta-right">3 mins read</span>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <div class="thumbnail">
+            <img src="./Assets/finest-nature.webp" alt="Nature" class="img-responsive">
+            <div>
+              <h2>PureFinest®: Aligned with Your Nature</h2>
+              <p>In our search for holistic health and wellness, the choices we make
+                 about the food and drink we consume play a critical role</p>
+                 <div class="meta-row">
+                  <span class="meta-left">HEALTH</span>
+                  <span class="meta-right">3 mins read</span>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <div class="thumbnail">
+            <img src="./Assets/finest-acerola.webp" alt="Acerola" class="img-responsive">
+            <div>
+              <h2>What is Acerola and Why is it Good for You?</h2>
+              <p>Have you ever heard of acerola? This extraordinary fruit,
+                 also known as Barbados cherry or West Indian cherry, is not just a</p>
+                 <div class="meta-row">
+                  <span class="meta-left">HEALTH</span>
+                  <span class="meta-right">3 mins read</span>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-------------------------------------------------------->
+ 
+  <!---------End of Section One-->
+ <!------ <section id="about" style="background-color:#fff;padding-top:50px;" class="about-2">
+    <div class="container">
+      <div class="row" style="display: flex; flex-wrap: wrap; align-items: center;">
+  <div class="col-sm-4" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left; padding: 30px;">
+          <h1 style="font-weight: bold; margin-bottom: 20px;">Taste Me! Feel
+            Me!®</h1>
+          <p style="font-size: 16px; line-height: 1.6;">
+            "Taste Me! - Feel Me!" ® is not just a slogan; it's an invitation to embark on
+             a sensory journey with our beverage, designed to leave you feeling refreshed,
+              revitalized, and ready to take on the day. From the first sip to the last, our beverage promises an experience that will 
+            awaken your senses and leave you with a feeling of overall well-being. Taste the Goodness, Feel the Difference!
+          </p>
+          <button type="button" style="margin-top: 20px; padding: 10px 20px; background-color: #000; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+            Meet Our Flavours
+          </button>
+        </div>
+        <div class="col-sm-4" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left; padding: 30px;">
+            <h1 style="font-weight: bold; margin-bottom: 20px;">Taste Me! Feel
+              Me!®</h1>
+            <p style="font-size: 16px; line-height: 1.6;">
+              "Taste Me! - Feel Me!" ® is not just a slogan; it's an invitation to embark on
+               a sensory journey with our beverage, designed to leave you feeling refreshed,
+                revitalized, and ready to take on the day. From the first sip to the last, our beverage promises an experience that will 
+              awaken your senses and leave you with a feeling of overall well-being. Taste the Goodness, Feel the Difference!
+            </p>
+            <button type="button" style="margin-top: 20px; padding: 10px 20px; background-color: #000; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+              Meet Our Flavours
+            </button>
+          </div>
+        <div class="col-sm-4" style="display: flex; justify-content: center; align-items: center;">
+            <img src="./Assets/finest-image-6.webp" alt="" style="max-width: 100%; height: auto;">
+          </div>
+      </div>
+    </div>
+  </section>-->
+<!----  <section id="about" class="about-2" style="background-color:#fff; padding-top:50px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 col-xs-12" style="padding: 30px; text-align: center;">
+          <img src="./Assets/finest-boost.webp" alt="Confidence" class="img-responsive center-block">
+        </div>
+        <div class="col-sm-4 col-xs-12" style="padding: 30px; text-align: center;">
+          <img src="./Assets/finest-being.webp" alt="Nature" class="img-responsive center-block">
+        </div>
+        <div class="col-sm-4 col-xs-12" style="padding: 30px; text-align: center;">
+          <img src="./Assets/finest-level-up.webp" alt="Acerola" class="img-responsive center-block">
+        </div>
+      </div>
+    </div>
+  </section>-->
+  <section id="about" class="about-2" style="background-color:#fff; padding-top:50px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 col-xs-12">
+          <div class="thumbnail">
+            <img src="./Assets/finest-boost.webp" alt="Confidence" class="img-responsive">
+            <div>
+              <h2>Confident You: PureFinest®'s Well-Being Boost</h2>
+              <p>In a world where our well-being is both a
+                 journey and destination, PureFinest® Vitamin emerges as a beacon of empowerment, crafting</p>
+                 <div class="meta-row">
+                  <span class="meta-left">HEALTH</span>
+                  <span class="meta-right">3 mins read</span>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <div class="thumbnail">
+            <img src="./Assets/finest-being.webp" alt="Nature" class="img-responsive">
+            <div>
+              <h2>PureFinest®: Aligned with Your Nature</h2>
+              <p>In our search for holistic health and wellness, the choices we make
+                 about the food and drink we consume play a critical role</p>
+                 <div class="meta-row">
+                  <span class="meta-left">HEALTH</span>
+                  <span class="meta-right">3 mins read</span>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12">
+          <div class="thumbnail">
+            <img src="./Assets/finest-level-up.webp" alt="Acerola" class="img-responsive">
+            <div>
+              <h2>What is Acerola and Why is it Good for You?</h2>
+              <p>Have you ever heard of acerola? This extraordinary fruit,
+                 also known as Barbados cherry or West Indian cherry, is not just a</p>
+                 <div class="meta-row">
+                  <span class="meta-left">HEALTH</span>
+                  <span class="meta-right">3 mins read</span>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+
+  <div class="container-fluid" style="background-color: #ffffff;">
+    <div class="row">
+      <div class="col-sm-4">
+        <h2 style="font-weight: bold;margin-left:100px">We are PureFinestDrinks</h2>
+        <p style="font-size: 16px; line-height: 1.6;margin-left:100px;">
+          Revitalize your passion, elevate every moment, empower your success naturally.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Start of Footer -->
+<footer class="footer" style="background-color: rgb(4, 31, 4); padding: 30px 0; color: white; margin-top: 0px;">
+  <div class="container">
+    <div class="row" style="margin-bottom: 30px;">
+      <!-- Logo -->
+      <div class="col-sm-6 text-left">
+        <img src="/Assets/Footer logo.png" alt="The Pure Finest Logo" style="max-height: 200px;">
+      </div>
+
+      <!-- Language Selector -->
+      <div class="col-sm-6 text-right">
+        <select class="form-control" style="width: 200px; background-color:#29226b; color:#ffffff; display: inline-block;">
+          <option value="en">English</option>
+          <option value="fr">French</option>
+          <option value="es">Spanish</option>
+          <option value="dt">Dutch</option>
+          <option value="ar">Arabic</option>
+          <option value="ch">Chinese</option>
+          <option value="pt">Portuguese</option>
+          <option value="rs">Russian</option>
+          <option value="tr">Turkish</option>
+          <option value="yr">Yoruba</option>
+          <option value="ig">Igbo</option>
+          <option value="ha">Hausa</option>
+        </select>
+      </div>
+    </div>
+
+    <hr style="border-color: #fff;">
+
+    <div class="row" style="margin-bottom: 30px;">
+      <!-- Useful Links -->
+      <div class="col-sm-3">
+        <h4>Useful Links</h4>
+        <ul class="list-unstyled">
+          <li><a href="" class="text-white">Sustainability</a></li>
+          <li><a href="" class="text-white">Responsibility</a></li>
+          <li><a href="" class="text-white">Terms Of Use</a></li>
+          <li><a href="" class="text-white">Brands Protection</a></li>
+        </ul>
+      </div>
+
+      <!-- Information -->
+      <div class="col-sm-3">
+        <h4>Information</h4>
+        <ul class="list-unstyled">
+          <li><a href="" class="text-white">Cookies Setting</a></li>
+          <li><a href="" class="text-white">Imprint</a></li>
+          <li><a href="" class="text-white">Fraud Warning</a></li>
+          <li><a href="" class="text-white">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Empty or Reserved Column -->
+      <div class="col-sm-3">
+        <!-- Reserved for future use -->
+      </div>
+
+      <!-- Follow Us -->
+      <div class="col-sm-3">
+        <h4>Follow Us</h4>
+        <i class="fab fa-tiktok fa-2x" style="margin-right: 10px;"></i>
+        <i class="fab fa-twitter fa-2x" style="margin-right: 10px;"></i>
+        <i class="fab fa-instagram fa-2x" style="margin-right: 10px;"></i>
+        <i class="fab fa-threads fa-2x"></i>
+      </div>
+    </div>
+
+    <hr style="border-color: #fff;">
+
+    <!-- Copyright -->
+    <div class="row text-center">
+      <div class="col-sm-12">
+        <p style="margin: 0;">© 2025. The Pure Finest Inc.® Company. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  
+</footer>
+<!-- End of Footer -->
+
+  <!-- ... existing scripts and closing tags ... -->
+  
+<script>
+  // Hamburger Toggle
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('main-nav');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+
+  // Dropdown Toggle (Mobile)
+  const dropdownLinks = document.querySelectorAll('.dropdown > a');
+  dropdownLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const parent = link.parentElement;
+        parent.classList.toggle('active');
+      }
+    });
+  });
+
+  // Scroll Rotation
+  let lastScroll = window.pageYOffset || document.documentElement.scrollTop;
+  const rotatingSvg = document.getElementById("rotatingSvg");
+  let rotation = 0;
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    rotation += currentScroll > lastScroll ? -10 : 10;
+    rotatingSvg.style.transform = `rotate(${rotation}deg)`;
+    lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+  });
+  /*text increase and decrease*/
+  const rotatingImage = document.getElementById("rotatingSvg");
+  const vitalityText = document.getElementById("vitalityText");
+
+  let lastAngle = 0;
+  let currentAngle = 0;
+
+  function rotateImage() {
+    // Increment angle
+    currentAngle = (currentAngle + 1) % 360;
+    rotatingImage.style.transform = `rotate(${currentAngle}deg)`;
+
+    // Detect direction
+    const direction = currentAngle > lastAngle || (lastAngle === 359 && currentAngle === 0)
+      ? "right"
+      : "left";
+
+    // Show or fade text based on direction
+    if (direction === "left") {
+      vitalityText.style.opacity = "1"; // Appear
+    } else {
+      vitalityText.style.opacity = "0"; // Disappear
+    }
+
+    lastAngle = currentAngle;
+
+    requestAnimationFrame(rotateImage); // Loop
+  }
+
+  rotateImage();
+</script>
+
+</body>
+</html>
