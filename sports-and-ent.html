@@ -407,6 +407,10 @@ button a{
   margin-top: 200px;
   text-align: justify;
 }
+.video-content h3{
+  font-size: 30px;
+  margin-left: 0;
+}
 .globally span {
   display: block;
   margin-left: 0; /* remove indent for mobile */
@@ -495,8 +499,14 @@ button a{
   /*font-family: 'Tangerine', serif;*/
  /* text-transform:uppercase;*/
  /* font-weight: 600;*/
-  font-size: 20px;
+  font-size: 5px;
  margin-top: 0;
+}
+.globally span {
+  font-size: 20px;
+}
+.video-paragraph{
+  font-size: 15px;
 }
 .menu-toggle {
   display: flex;
@@ -612,6 +622,11 @@ z-index: 1;
         margin-top:100px;
         margin-right: 0;
         text-align: justify;
+      }
+      .video-content h3{
+        font-size: 20px;
+        margin-left: 0;
+        width: 100%;
       }
     
  }
@@ -824,8 +839,8 @@ z-index: 1;
       background: rgba(0, 0, 0, 0.5); z-index: 1;">
     </div>
   
-    <div class="video-content" style="position: absolute; top: 20%; left: 10%; right: 10%; color: white; z-index: 2;">
-      <h3 class="globally" style="font-size: 30px; margin-top: 0; width: 100%;">
+    <div class="video-content" style="position: absolute; top: 0; left: 10%; right: 10%; color: white; z-index: 2;">
+      <h3 >
         Sports and Entertainment: Energizing Moments,  
         <span>Empowering Communities</span>
       </h3>
@@ -903,7 +918,7 @@ z-index: 1;
           <div class="row">
             
             <div class="col-sm-6 col-xs-12">
-              <div class="thumbnail" style="border: 3px solid brown; padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%;">
+              <div class="thumbnail" style="border: 3px solid brown;border-radius: 12px; padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%;">
                 <img src="./Assets/sport-and-ent-humanrights.png" alt="Human Rights" class="img-responsive" style="width: 100%; height: 250px; object-fit: cover;">
                 <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
                   <div>
@@ -912,8 +927,8 @@ z-index: 1;
                   </div>
                   <div class="meta-row" style="display: flex; justify-content: space-between; align-items: center;">
                     <span class="meta-left" style="font-weight: bold;">Human Rights Governance:</span>
-                    <span class="meta-right" style="text-decoration: underline; font-weight: bold;">
-                      Learn More →
+                    <span class="meta-right" style="text-decoration: underline; font-weight: bold;" >
+                   <a href="humanrights.html" style="color: #000;">   Learn More →</a>
                     </span>
                   </div>
                 </div>
@@ -921,7 +936,7 @@ z-index: 1;
             </div>
       
             <div class="col-sm-6 col-xs-12">
-              <div class="thumbnail" style="border: 3px solid brown; padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%;">
+              <div class="thumbnail" style="border: 3px solid brown; border-radius: 12px;padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%;">
                 <img src="./Assets/sport-and-ent-sports.jpg" alt="Sports and Entertainment" class="img-responsive" style="width: 100%; height: 250px; object-fit: cover;">
                 <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
                   <div>
@@ -931,7 +946,7 @@ z-index: 1;
                   <div class="meta-row" style="display: flex; justify-content: space-between; align-items: center;">
                     <span class="meta-left" style="font-weight: bold;">Sponsorships:</span>
                     <span class="meta-right" style="text-decoration: underline; font-weight: bold;">
-                      Learn More →
+                   <a href="sports-and-ent.html" style="color: #000;">   Learn More →</a>
                     </span>
                   </div>
                 </div>
@@ -947,8 +962,8 @@ z-index: 1;
     <div class="row">
       
       <div class="col-sm-6 col-xs-12">
-        <div class="thumbnail" style="border: 3px solid brown; padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%;">
-          <img src="./Assets/sport-and-ent-foundation.png" alt="Human Rights" class="img-responsive" style="width: 100%; height: 250px; object-fit: cover;">
+        <div class="thumbnail" style="border: 3px solid brown; border-radius: 12px; padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%;">
+          <img src="./Assets/sport-and-ent-foundation.png" alt="Human Rights" class="img-responsive" style="width: 100%; height: 250px; object-fit: cover; border-top-left-radius: 12px; border-top-right-radius: 12px;">
           <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
               <h2 style="font-size: 22px; margin-bottom: 10px;">Pure Finest Foundation</h2>
@@ -957,7 +972,7 @@ z-index: 1;
             <div class="meta-row" style="display: flex; justify-content: space-between; align-items: center;">
               <span class="meta-left" style="font-weight: bold;">Partnerships:</span>
               <span class="meta-right" style="text-decoration: underline; font-weight: bold;">
-                Learn More →
+               <a href="pffoundation.html" style="color: #000;"> Learn More →</a>
               </span>
             </div>
           </div>
@@ -965,8 +980,8 @@ z-index: 1;
       </div>
 
       <div class="col-sm-6 col-xs-12">
-        <div class="thumbnail" style="border: 3px solid brown; padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%;">
-          <img src="./Assets/sport-and-ent-matter.png" alt="Sports and Entertainment" class="img-responsive" style="width: 100%; height: 250px; object-fit: cover;">
+        <div class="thumbnail" style="border: 3px solid brown; border-radius: 12px; padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%;">
+          <img src="./Assets/sport-and-ent-matter.png" alt="Sports and Entertainment" class="img-responsive" style="width: 100%; height: 250px; object-fit: cover; border-top-left-radius: 12px; border-top-right-radius: 12px;">
           <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
               <h2 style="font-size: 22px; margin-bottom: 10px;">People Matter</h2>
@@ -975,7 +990,7 @@ z-index: 1;
             <div class="meta-row" style="display: flex; justify-content: space-between; align-items: center;">
               <span class="meta-left" style="font-weight: bold;">Employee Stories:</span>
               <span class="meta-right" style="text-decoration: underline; font-weight: bold;">
-                Learn More →
+               <a href="people-first.html" style="color: #000;"> Learn More →</a>
               </span>
             </div>
           </div>
@@ -985,6 +1000,7 @@ z-index: 1;
     </div>
   </div>
 </section>
+
 
       
    
