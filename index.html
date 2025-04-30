@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <link href="https://fonts.googleapis.com/css2?family=Open Sans&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Playfair Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==
   " crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,9 +20,30 @@
   padding: 0;
 box-sizing: border-box;
 }
+ body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+ /* font-family: 'Roboto', sans-serif;*/
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.fullwidth-video-container {
+  margin: 0;
+  padding: 0;
+}
+
+.fullwidth-video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 body {
 margin: 0;
-font-family: Arial, sans-serif;
+/*font-family: Arial, sans-serif;*/
 overflow-x: hidden;
 }
 .text-white {
@@ -118,7 +141,7 @@ box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 z-index: 100;
 }
 .follow-us{
-  color: rgb(139, 204, 139);
+  color: rgb(58, 82, 58);
 }
 /*li:hover .dropdown-menu,
 li.active .dropdown-menu {
@@ -196,15 +219,24 @@ button a{
   overflow: hidden;
   background-color: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-left: 0;
+  margin-top:60px;
 }
-
+li a{
+  font-size: 16px;
+}
 .thumbnail:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
 }
-.mobile-version-1,.mobile-version-2,
-.mobile-version-3,.mobile-version-4,.mobile-version-5{
- font-size: 16px;
+.mobile-version-1 a,.mobile-version-2 a,
+.mobile-version-3 a,.mobile-version-4 a,.mobile-version-5 a{
+ font-size: 18px !important;
+ font-family: 'Playfair Display', serif;
+}
+p,li,h1,h3,h2{
+  font-family: 'Open Sans', sans-serif;
+
 }
 /*Meta row*/
 .meta-row {
@@ -221,11 +253,16 @@ button a{
 .meta-right {
   display: inline-block;
 }
+.company{
+  margin-left: 100px;
+}
 @media (max-width: 768px) {
 .mobile-version-1,.mobile-version-2,
 .mobile-version-3,.mobile-version-4,.mobile-version-5{
   width: 100%;
   border-bottom: 1px solid #000;
+ /* font-size: 16px;*/
+  font-weight: 900;
 }
 .menu-toggle {
   display: flex;
@@ -285,9 +322,7 @@ top:-23px;
 .brand .text-logo {
   margin-top: -120px;
 }
-/*.footer{
- /* margin-left: 150px;*/
-/*}*/
+
 .foot1, .footer-select, .foot2{
   margin-left: 100px;
 }  
@@ -300,7 +335,33 @@ body {
 margin: 300;
 font-family: Arial, sans-serif;
 /*  overflow-x: hidden;*/
-}  }
+} 
+.company{
+  margin-left: 0;
+  /*font-weight: bold;*/
+} 
+/*.foot{
+
+}*/
+.foot-2{
+  margin-bottom: 0;
+ position: relative; 
+ top:30px;
+  background-color: transparent;
+   margin-bottom: 100px;
+    line-height: 0;
+    width:100vw;
+}
+.footer{
+  margin-top: 0;
+ margin-left: 0;
+ width:100vw;
+ 
+}
+.thumbnail{
+  margin-left: 30px;
+}
+}
 
   </style>
   
@@ -330,7 +391,7 @@ font-family: Arial, sans-serif;
 
     <ul class="nav" id="main-nav">
       <li class="mobile-version-1 "><a href="#">Our Company <i class="fa fa-caret-down"></i></a>
-        <div class="dropdown-menu">
+        <div class="dropdown-menu company">
           <!-- repeat content as above -->
           <div class="dropdown-content">
             <div>
@@ -487,15 +548,18 @@ font-family: Arial, sans-serif;
   </div>
 </nav>
 <!----Start of Bannner-->
-<div class="container-fluid">
+<!-----<div class="container-fluid">
     <video src="./Assets/HomeBanner1.mp4" width="100%" autoplay muted></video>
+  </div>-->
+  <div class="container-fluid fullwidth-video-container">
+    <video src="./Assets/HomeBanner1.mp4" autoplay muted loop playsinline></video>
   </div>
   <!-----Grid System-->
   <div class="container-fluid">
     
     <div class="row" style="width: 100%;max-height:100%;">
-      <div class="col-sm-6"><h3 style="font-weight: 900;">A CUT ABOVE THE REST</h3>
-        <p style="font-family:'Courier New', Courier, monospace;word-spacing:10px;font-size:20px;text-align:justify">At Pure Finest Inc., caring for life is at the core of everything we do. We believe in creating food and drinks that nourish the Body, Mind, and spirit and inspire a healthier, more sustainable future. By refusing to cut corners, we ensure that every product is crafted with the finest premium ingredients, upholding our commitment to quality and well-being. From our sourcing practices to the final product, we prioritize excellence to deliver brands that truly make a difference in every sip and bite.</p></div>
+      <div class="col-sm-6"><h3 style="font-weight: 900;margin-top:60px;text-align:center;">A CUT ABOVE THE REST</h3>
+        <p style="word-spacing:10px;font-size:20px;text-align:justify">At Pure Finest Inc., caring for life is at the core of everything we do. We believe in creating food and drinks that nourish the Body, Mind, and spirit and inspire a healthier, more sustainable future. By refusing to cut corners, we ensure that every product is crafted with the finest premium ingredients, upholding our commitment to quality and well-being. From our sourcing practices to the final product, we prioritize excellence to deliver brands that truly make a difference in every sip and bite.</p></div>
       <div class="col-sm-6 thumbnail" style="background-color:lavenderblush;"><img src="./Assets/pure-finest-min1.png" alt=""  class="img-rounded" width="100%" style="max-height: 400px;height:auto;"></div>
     </div>
   </div>
@@ -503,7 +567,7 @@ font-family: Arial, sans-serif;
 <div class="container-fluid">
 <div class="row">
 <div class="col-sm-12">
-<h1 style="font-weight: 900;font-size:35px;margin-top:80px;">News and Press Release</h1>
+<h1 style="font-weight: 900;font-size:35px;margin-top:80px;text-align:center">News and Press Release</h1>
 </div>
 </div>
 </div>
@@ -513,10 +577,10 @@ font-family: Arial, sans-serif;
       <div class="col-md-4">
         <div class="thumbnail">
           <a href="#" target="_blank">
-            <img src="./Assets/BlogImage 3-1.png" alt="Lights" style="width:300%"  class="img-rounded">
+            <img src="./Assets/pure1.png" alt="Lights" style="width:300%"  class="img-rounded">
             <img src="/Assets/newsLogo 6.png" alt="" style="position: absolute;top:70px;background-color:#ffffff; width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="one">
             <div class="caption">
-              <p style="font-weight: 900;">PureFinest set to expand into Africa’s functional beverage market</p>
+              <p style="font-weight: 900;font-size:20px;">PureFinest set to expand into Africa’s functional beverage market</p>
               <div class="meta-row">
                 <span class="meta-left">HEALTH</span>
                 <span class="meta-right">Oct 1st,2024</span>
@@ -528,10 +592,10 @@ font-family: Arial, sans-serif;
       <div class="col-md-4">
         <div class="thumbnail">
           <a href="#" target="_blank">
-            <img src="./Assets/Blog 1.jpg" alt="Nature" style="width:100%" class="img-rounded">
+            <img src="./Assets/pure2.png" alt="Nature" style="width:100%" class="img-rounded">
             <img src="/Assets/newsLogo 2.png" alt="" style="position: absolute;top:70px;background-color:#ffffff; width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="two">
             <div class="caption">
-              <p style="font-weight: 900;">PureFinest Inc. is Preparing to Launch a New Line of Beverages</p>
+              <p style="font-weight: 900;font-size:20px;">PureFinest Inc. is Preparing to Launch a New Line of Beverages</p>
               <div class="meta-row">
                 <span class="meta-left">HEALTH</span>
                 <span class="meta-right">Oct 1st,2024</span>
@@ -543,10 +607,10 @@ font-family: Arial, sans-serif;
       <div class="col-md-4">
         <div class="thumbnail">
           <a href="#" target="_blank">
-            <img src="/Assets/Blog 2.jpg" alt="Fjords" style="width:100%" class="img-rounded">
+            <img src="/Assets/pure3.png" alt="Fjords" style="width:100%" class="img-rounded">
             <img src="/Assets/newsLogo 1.png" alt="" style="position: absolute;top:70px;background-color:#ffffff; width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="three">
             <div class="caption">
-              <p style="font-weight: 900;">PureFinest® Set to Launch Organic Vitamin, Sports,
+              <p style="font-weight: 900;font-size:20px;">PureFinest® Set to Launch Organic Vitamin, Sports,
                  and Vitality Beverages Across Africa</p>
                  <div class="meta-row">
                   <span class="meta-left">HEALTH</span>
@@ -558,17 +622,17 @@ font-family: Arial, sans-serif;
       </div>
     </div>
   </div>
-  <!------Start of second Image-->
+  <!---Start of second Image-->
   <div class="container-fluid" style="position: relative;top: 100px;">
      
     <div class="row">
       <div class="col-md-4">
         <div class="thumbnail">
           <a href="#" target="_blank">
-            <img src="/Assets/BlogImageEdit 2 (1).png" alt="Lights" style="width:250%">
+            <img src="/Assets/pure4.png" alt="Lights" style="width:250%">
             <img src="/Assets/newsLogo 5.png" alt="" style="position: absolute;top:70px;background-color:#ffffff; width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="four">
             <div class="caption">
-              <p style="font-weight: 900;">PureFinest set to expand into Africa’s functional beverage market</p>
+              <p style="font-weight: 900;font-size:20px;">PureFinest set to expand into Africa’s functional beverage market</p>
               <div class="meta-row">
                 <span class="meta-left">HEALTH</span>
                 <span class="meta-right">Oct 1st,2024</span>
@@ -580,10 +644,10 @@ font-family: Arial, sans-serif;
       <div class="col-md-4">
         <div class="thumbnail">
           <a href="#" target="_blank">
-            <img src="/Assets/BlogImage 3-1.png" alt="Nature" style="width:100%" class="img-rounded">
+            <img src="/Assets/pure5.png" alt="Nature" style="width:100%" class="img-rounded">
             <img src="/Assets/newsLogo 3.png" alt="" style="position: absolute;top:70px;background-color:#ffffff; width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="five">
             <div class="caption">
-              <p style="font-weight: 900;">PureFinest Inc. is Preparing to Launch a New Line of Beverages</p>
+              <p style="font-weight: 900; font-size:20px;">PureFinest Inc. is Preparing to Launch a New Line of Beverages</p>
               <div class="meta-row">
                 <span class="meta-left">HEALTH</span>
                 <span class="meta-right">Oct 1st,2024</span>
@@ -595,10 +659,10 @@ font-family: Arial, sans-serif;
       <div class="col-md-4">
         <div class="thumbnail">
           <a href="#" target="_blank">
-            <img src="/Assets/BlogImage 2-Edit.png" alt="Fjords" style="width:100%" class="img-rounded">
+            <img src="/Assets/pure6.png" alt="Fjords" style="width:100%" class="img-rounded">
             <img src="/Assets/newsLogo 4.png" alt="" style="position: absolute;top:70px;background-color:#ffffff; width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="six">
             <div class="caption">
-              <p style="font-weight: 900;">PureFinest® Set to Launch Organic Vitamin, Sports, and Vitality Beverages Across Africa</p>
+              <p style="font-weight: 900;font-size:20px;">PureFinest® Set to Launch Organic Vitamin, Sports, and Vitality Beverages Across Africa</p>
            <div class="meta-row">
             <span class="meta-left">HEALTH</span>
             <span class="meta-right">Oct 1st,2024</span>
@@ -610,28 +674,30 @@ font-family: Arial, sans-serif;
     </div>
   </div>
 </div>
-<!----Start of Footer-->
-<footer class="footer" style="background-color: rgb(4, 31, 4); padding: 30px 0; color: white;margin-top:100px;">
-  <div class="container">
-   <!---- <div class="row text-center">-->
-    <div class="row">
-      <!-- Logo -->
-      <div class="col-sm-6 foot1">
-        <img src="/Assets/Footer logo.png" alt="The Coca Cola Company Logo" style="max-height: 200px;">
-      </div>
-
-      <!-- Country Selector -->
-     <!----- <div class="col-sm-12" style="margin-top: 15px;">
-        <a href="https://www.coca-cola.com/country-selector" class="btn btn-default">United States | English</a>
-      </div>-->
-       <!-- Select Dropdown on the Right -->
-       <div class="col-md-6 footer-select">
-        <select class="form-control" style="width: 200px; background-color:#29226b;color:#ffffff;">
+<!-----top of footer-->
+<div class="container-fluid " style="margin-top: 100px;width:100vw;">
+  <div style="position: relative; background-color: transparent; margin-bottom: -1px; line-height: 0;" class="foot-2">
+    <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%; height: 100px; transform: scaleY(-1);">
+      <path fill="#378537" d="M0,32L60,42.7C120,53,240,75,360,74.7C480,75,600,53,720,53.3C840,53,960,75,1080,80C1200,85,1320,75,1380,69.3L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+    </svg>
+  </div>
+  
+  <!-- Start of Footer -->
+  <footer class=" container-fluid footer" style="background-color: #378537; padding: 30px 0; color: white; margin-top: -5px;width:100vw;">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Logo -->
+        <div class="col-sm-6 foot1">
+          <img src="/Assets/Footer logo.png" alt="The Coca Cola Company Logo" style="max-height: 200px;">
+        </div>
+  
+        <!-- Language Selector -->
+        <div class="col-md-6 footer-select">
+          <select class="form-control" style="width: 200px; background-color:#29226b; color:#ffffff;">
             <option value="en">English</option>
             <option value="fr">French</option>
             <option value="es">Spanish</option>
             <option value="dt">Dutch</option>
-            <option value="es">Spanish</option>
             <option value="ar">Arabic</option>
             <option value="ch">Chinese</option>
             <option value="pt">Portuguese</option>
@@ -640,62 +706,65 @@ font-family: Arial, sans-serif;
             <option value="yr">Yoruba</option>
             <option value="ig">Igbo</option>
             <option value="ha">Hausa</option>
-        </select>
-    </div>
-    </div>
-
-    <hr style="border-color: #fff;">
-
-    <div class="row">
-      <!-- About Us Links -->
-      <div class="col-sm-3 foot2">
-        <h4>Useful Links</h4>
-        <ul class="list-unstyled">
-          <li><a href="" class="text-white">Sustainability</a></li>
-          <li><a href="" class="text-white">Responsibility</a></li>
-          <li><a href="" class="text-white">Terms Of Use</a></li>
-          <li><a href="" class="text-white">Brands Protection</a></li>
-          
-        </ul>
+          </select>
+        </div>
       </div>
-
-      <!-- Help Links -->
-      <div class="col-sm-3 foot2">
-        <h4>Information</h4>
-        <ul class="list-unstyled">
-          <li><a href="" class="text-white">Cookies Setting</a></li>
-          <li><a href="" class="text-white">Imprint</a></li>
-          <li><a href="" class="text-white">Fraud Warning</a></li>
-          <li><a href="" class="text-white">Privacy Policy</a></li>
-        </ul>
+  
+      <hr style="border-color: #fff;">
+  
+      <div class="row">
+        <!-- Useful Links -->
+        <div class="col-sm-3 foot2">
+          <h4 style="font-size: 20px;">Useful Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="" class="text-white">Sustainability</a></li>
+            <li><a href="" class="text-white">Responsibility</a></li>
+            <li><a href="" class="text-white">Terms Of Use</a></li>
+            <li><a href="" class="text-white">Brands Protection</a></li>
+          </ul>
+        </div>
+  
+        <!-- Information Links -->
+        <div class="col-sm-3 foot2">
+          <h4 style="font-size: 20px;">Information</h4>
+          <ul class="list-unstyled">
+            <li><a href="" class="text-white">Cookies Setting</a></li>
+            <li><a href="" class="text-white">Imprint</a></li>
+            <li><a href="" class="text-white">Fraud Warning</a></li>
+            <li><a href="" class="text-white">Privacy Policy</a></li>
+          </ul>
+        </div>
+  
+        <!-- Empty Column -->
+        <div class="col-sm-3 foot2"></div>
+  
+        <!-- Social Media Icons -->
+        <div class="col-sm-3 foot2">
+          <h3 class="follow-us">Follow Us</h3>
+          <i class="fab fa-tiktok fa-2x"></i>
+          <i class="fab fa-twitter fa-2x"></i>
+          <i class="fab fa-instagram fa-2x"></i>
+          <i class="fab fa-threads fa-2x"></i>
+        </div>
       </div>
-
-      <!-- Legal Links -->
-      <div class="col-sm-3 foot2">
-     
-      </div>
-      <div class="col-sm-3 foot2">
-        <h3 class="follow-us">Follow Us</h3>
-        <i class="fab fa-tiktok fa-2x"></i>
-        <i class="fab fa-twitter fa-2x"></i>
-        <i class="fab fa-instagram fa-2x"></i>
-        <i class="fab fa-threads fa-2x"></i>
-      </div>
-    </div>
-
-    <hr style="border-color: #fff;">
-
-    <!-- Social Media Links -->
-   
-
-    <!-- Bottom Note -->
-    <div class="row text-center" style="margin-top: 20px;">
-      <div class="col-sm-12">
-        <p>© 2025. The Pure Finest Inc.® Company. All rights reserved.</p>
+  
+      <hr style="border-color: #fff;">
+  
+      <!-- Bottom Note -->
+      <div class="row text-center" style="margin-top: 20px;">
+        <div class="col-sm-12">
+          <p style="font-size: 20px;">© 2025. The Pure Finest Inc.® Company. All rights reserved.</p>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
+</div>
+
+ 
+
+<!-- Upside-Down Wave at Top of Footer -->
+
+
 <!----End of Footer Section-->
 <script>
  
