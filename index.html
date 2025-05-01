@@ -30,7 +30,12 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-
+.thumbnail img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 .fullwidth-video-container {
   margin: 0;
   padding: 0;
@@ -340,26 +345,23 @@ font-family: Arial, sans-serif;
   margin-left: 0;
   /*font-weight: bold;*/
 } 
-/*.foot{
 
-}*/
 .foot-2{
-  margin-bottom: 0;
- position: relative; 
- top:30px;
-  background-color: transparent;
-   margin-bottom: 100px;
-    line-height: 0;
-    width:100vw;
+position: absolute;
+top:15px;
 }
 .footer{
-  margin-top: 0;
+  margin-top:-10px;
  margin-left: 0;
  width:100vw;
  
 }
 .thumbnail{
   margin-left: 30px;
+}
+.cut-text{
+  text-align: justify;
+  padding:0;
 }
 }
 
@@ -559,7 +561,7 @@ font-family: Arial, sans-serif;
     
     <div class="row" style="width: 100%;max-height:100%;">
       <div class="col-sm-6"><h3 style="font-weight: 900;margin-top:60px;text-align:center;">A CUT ABOVE THE REST</h3>
-        <p style="word-spacing:10px;font-size:20px;text-align:justify">At Pure Finest Inc., caring for life is at the core of everything we do. We believe in creating food and drinks that nourish the Body, Mind, and spirit and inspire a healthier, more sustainable future. By refusing to cut corners, we ensure that every product is crafted with the finest premium ingredients, upholding our commitment to quality and well-being. From our sourcing practices to the final product, we prioritize excellence to deliver brands that truly make a difference in every sip and bite.</p></div>
+        <p style="word-spacing:10px;font-size:20px;text-align:justify;padding:30px;" class="cut-text">At Pure Finest Inc., caring for life is at the core of everything we do. We believe in creating food and drinks that nourish the Body, Mind, and spirit and inspire a healthier, more sustainable future. By refusing to cut corners, we ensure that every product is crafted with the finest premium ingredients, upholding our commitment to quality and well-being. From our sourcing practices to the final product, we prioritize excellence to deliver brands that truly make a difference in every sip and bite.</p></div>
       <div class="col-sm-6 thumbnail" style="background-color:lavenderblush;"><img src="./Assets/pure-finest-min1.png" alt=""  class="img-rounded" width="100%" style="max-height: 400px;height:auto;"></div>
     </div>
   </div>
@@ -577,10 +579,10 @@ font-family: Arial, sans-serif;
       <div class="col-md-4">
         <div class="thumbnail">
           <a href="#" target="_blank">
-            <img src="./Assets/pure1.png" alt="Lights" style="width:300%"  class="img-rounded">
-            <img src="/Assets/BlogImage 2.png" alt="" style="position: absolute;top:70px;background-color:#ffffff; width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="one">
+            <img src="./Assets/pure1.png" alt="Lights"   class="img-rounded">
+            <!---<img src="/Assets/newsLogo 6.png" alt="" style="position: absolute;top:70px;background-color:#ffffff; width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="one">-->
             <div class="caption">
-              <p style="font-weight: 900;font-size:20px;">PureFinest set to expand into Africa’s functional beverage market</p>
+              <p style="font-weight: 900;font-size:20px;margin-top:50px;">PureFinest set to expand into Africa’s functional beverage market</p>
               <div class="meta-row">
                 <span class="meta-left">HEALTH</span>
                 <span class="meta-right">Oct 1st,2024</span>
@@ -592,10 +594,10 @@ font-family: Arial, sans-serif;
       <div class="col-md-4">
         <div class="thumbnail">
           <a href="#" target="_blank">
-            <img src="./Assets/pure2.png" alt="Nature" style="width:100%" class="img-rounded">
-            <img src="/Assets/Blog 1.jpg" alt="" style="position: absolute;top:70px;background-color:#ffffff; width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="two">
+            <img src="./Assets/pure2.png" alt="Nature"  class="img-rounded">
+           <!----- <img src="/Assets/newsLogo 2.png" alt="" style="position: absolute;top:70px;background-color:#ffffff; width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="two">-->
             <div class="caption">
-              <p style="font-weight: 900;font-size:20px;">PureFinest Inc. is Preparing to Launch a New Line of Beverages</p>
+              <p style="font-weight: 900;font-size:20px;margin-top:22px;">PureFinest Inc. is Preparing to Launch a New Line of Beverages</p>
               <div class="meta-row">
                 <span class="meta-left">HEALTH</span>
                 <span class="meta-right">Oct 1st,2024</span>
@@ -607,8 +609,8 @@ font-family: Arial, sans-serif;
       <div class="col-md-4">
         <div class="thumbnail">
           <a href="#" target="_blank">
-            <img src="/Assets/pure3.png" alt="Fjords" style="width:100%" class="img-rounded">
-            <img src="/Assets/Blog 2.jpg" alt="" style="position: absolute;top:70px;background-color:#ffffff; width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="three">
+            <img src="/Assets/pure3.png" alt="Fjords"  class="img-rounded">
+            <!-----<img src="/Assets/newsLogo 1.png" alt="" style="position: absolute;top:70px;background-color:#ffffff; width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="three">-->
             <div class="caption">
               <p style="font-weight: 900;font-size:20px;">PureFinest® Set to Launch Organic Vitamin, Sports,
                  and Vitality Beverages Across Africa</p>
@@ -629,8 +631,8 @@ font-family: Arial, sans-serif;
       <div class="col-md-4">
         <div class="thumbnail">
           <a href="#" target="_blank">
-            <img src="/Assets/pure4.png" alt="Lights" style="width:250%">
-            <img src="/Assets/BlogImage 2 (1).png" alt="" style="position: absolute;top:70px;background-color:#ffffff; width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="four">
+            <img src="/Assets/pure4.png" alt="Lights" >
+            <!------<img src="/Assets/newsLogo 5.png" alt="" style="position: absolute;top:70px;background-color:#ffffff; width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="four">-->
             <div class="caption">
               <p style="font-weight: 900;font-size:20px;">PureFinest set to expand into Africa’s functional beverage market</p>
               <div class="meta-row">
@@ -644,10 +646,10 @@ font-family: Arial, sans-serif;
       <div class="col-md-4">
         <div class="thumbnail">
           <a href="#" target="_blank">
-            <img src="/Assets/pure5.png" alt="Nature" style="width:100%" class="img-rounded">
-            <img src="/Assets/BlogImage 2 (1).png" alt="" style="position: absolute;top:70px;background-color:#ffffff; width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="five">
+            <img src="/Assets/pure5.png" alt="Nature" class="img-rounded">
+            <!-----<img src="/Assets/newsLogo 3.png" alt="" style="position: absolute;top:70px;background-color:#ffffff; width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="five">-->
             <div class="caption">
-              <p style="font-weight: 900; font-size:20px;">PureFinest Inc. is Preparing to Launch a New Line of Beverages</p>
+              <p style="font-weight: 900; font-size:20px; margin-top:-50px;">PureFinest Inc. is Preparing to Launch a New Line of Beverages</p>
               <div class="meta-row">
                 <span class="meta-left">HEALTH</span>
                 <span class="meta-right">Oct 1st,2024</span>
@@ -659,10 +661,10 @@ font-family: Arial, sans-serif;
       <div class="col-md-4">
         <div class="thumbnail">
           <a href="#" target="_blank">
-            <img src="/Assets/pure6.png" alt="Fjords" style="width:100%" class="img-rounded">
-            <img src="/Assets/BlogImage 2 (1).png" alt="" style="position: absolute;top:70px;background-color:#ffffff; width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="six">
+            <img src="/Assets/pure6.png" alt="Fjords"  class="img-rounded">
+            <!------<img src="/Assets/newsLogo 4.png" alt="" style="position: absolute;top:70px;background-color:#ffffff; width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="six">-->
             <div class="caption">
-              <p style="font-weight: 900;font-size:20px;">PureFinest® Set to Launch Organic Vitamin, Sports, and Vitality Beverages Across Africa</p>
+              <p style="font-weight: 900;font-size:20px;margin-top:-30px;">PureFinest® Set to Launch Organic Vitamin, Sports, and Vitality Beverages Across Africa</p>
            <div class="meta-row">
             <span class="meta-left">HEALTH</span>
             <span class="meta-right">Oct 1st,2024</span>
@@ -675,15 +677,25 @@ font-family: Arial, sans-serif;
   </div>
 </div>
 <!-----top of footer-->
-<div class="container-fluid " style="margin-top: 100px;width:100vw;">
+<!----<div class="container-fluid " style="margin-top: 100px;width:00vw;margin-left:-20px;">
   <div style="position: relative; background-color: transparent; margin-bottom: -1px; line-height: 0;" class="foot-2">
     <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%; height: 100px; transform: scaleY(-1);">
       <path fill="#378537" d="M0,32L60,42.7C120,53,240,75,360,74.7C480,75,600,53,720,53.3C840,53,960,75,1080,80C1200,85,1320,75,1380,69.3L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
     </svg>
+  </div>-->
+  <div class="container-fluid" style="margin-top: 100px; width: 100vw; padding: 0; margin: 0;">
+    <div style="position: relative; background-color: transparent; line-height: 0;" class="foot-2">
+      <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100vw; height: 300px;
+       transform: scaleY(-1);">
+        <path fill="#378537" d="M0,32L60,42.7C120,53,240,75,360,74.7C480,75,600,53,720,53.3C840,53,960,75,
+        1080,80C1200,85,1320,75,1380,69.3L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,
+        0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+      </svg>
+    </div>
   </div>
   
   <!-- Start of Footer -->
-  <footer class=" container-fluid footer" style="background-color: #378537; padding: 30px 0; color: white; margin-top: -5px;width:100vw;">
+  <footer class=" container-fluid footer" style="background-color: #378537; padding: 30px 0; color: white; margin-top: -120px;width:100vw;">
     <div class="container-fluid">
       <div class="row">
         <!-- Logo -->
