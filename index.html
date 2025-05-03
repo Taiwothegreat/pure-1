@@ -25,9 +25,108 @@ box-sizing: border-box;
   padding: 0;
   box-sizing: border-box;
 }
+.thumbnail-section .thumbnail {
+  position: relative;
+  height: 450px; /* enough for image + caption */
+  margin-bottom: 30px;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-section .img-container {
+  height: 60%; /* control how much space the image takes */
+  overflow: hidden;
+}
+
+.thumbnail-section .img-container img.img-rounded {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.thumbnail-section .thumbnail:hover .img-container img.img-rounded {
+  transform: scale(1.05);
+}
+
+.thumbnail-section .logo-overlay {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  background-color: #ffffff;
+  width: 50%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 2;
+}
+
+.thumbnail-section .caption {
+  padding: 16px;
+  text-align: justify;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.thumbnail-section .caption p {
+  font-weight: 900;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.thumbnail-section .meta-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #666;
+}
+/*new for banner video*/
+.video-banner-section {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  z-index: 0;
+}
+
+.video-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Overlay to darken the video */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* darker if needed */
+  z-index: 1;
+  pointer-events: none;
+}
+
+.foot2 h4,ul li a,i{
+  margin-left: 0px;
+
+   }
+
+*/
 body {
  /* font-family: 'Roboto', sans-serif;*/
   font-family: 'Open Sans', sans-serif;
+}
+.container-fluid video{
+  margin-left: 25px;
+  width:100%;
 }
 
 .thumbnail img {
@@ -46,6 +145,11 @@ body {
   height: auto;
   display: block;
 }
+.foot2 h4,ul li a,i{
+/*margin-left:10px;*/
+position: relative;
+left:0px;
+  }
 body {
 margin: 0;
 /*font-family: Arial, sans-serif;*/
@@ -113,7 +217,22 @@ width: 25px;
 height: 3px;
 background-color: #000;
 }
+/*darken the video*/
 
+/* Make container stretch full width */
+.container-fluid {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Darken the video and make it fill the container */
+.dark-video {
+  filter: brightness(0.5);
+  width: 100%;
+  height: auto;
+  display: block; /* Removes any inline spacing */
+}
 ul.nav {
 list-style: none;
 display: flex;
@@ -248,8 +367,9 @@ p,li,h1,h3,h2{
 
 }
 .cut-text{
-  margin: 0;
-    padding:10px;
+  margin: 20px;
+    padding:0px;
+    text-align: justify;
   }
 /*Meta row*/
 .meta-row {
@@ -269,6 +389,102 @@ p,li,h1,h3,h2{
 .company{
   margin-left: 100px;
 }
+/*thumbnail newest*/
+.thumbnail {
+  overflow: hidden;
+  position: relative;
+  height: 350px;
+  margin-bottom: 30px;
+}
+
+.thumbnail a {
+  display: block;
+  height: 100%;
+  text-align: center;
+}
+
+.thumbnail img.img-rounded {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.thumbnail:hover img.img-rounded {
+  transform: scale(1.05);
+}
+
+.caption {
+  padding: 10px;
+  text-align: justify;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.caption p {
+  margin-bottom: 10px;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #666;
+}
+
+.logo-overlay {
+  position: absolute;
+  top: 70px;
+  background-color: #ffffff;
+  width: 50%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 2;
+  
+}
+.logo-overlay img{
+  height: 10px;
+  width:20px;
+}
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff; /* optional background */
+  padding: 10px 0;
+}
+
+.marquee-inner {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 60s linear infinite;
+}
+
+.marquee-img {
+  height: auto;
+  width: auto;
+  max-height: 80px;
+  margin: 0 15px;
+  flex-shrink: 0;
+}
+
+/* Keyframes for marquee scroll */
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.footer-select{
+  margin-top: 100px;
+}
 @media (max-width: 768px) {
 .mobile-version-1,.mobile-version-2,
 .mobile-version-3,.mobile-version-4,.mobile-version-5{
@@ -276,6 +492,7 @@ p,li,h1,h3,h2{
   border-bottom: 1px solid #000;
  /* font-size: 16px;*/
   font-weight: 900;
+  margin-left: 6px;
 }
 .menu-toggle {
   display: flex;
@@ -368,12 +585,32 @@ top:18px;
   margin-left: 30px;
 }
 .cut-text{
-margin: 0;
-  padding:0;
+margin-left: 20px;
 }
 .brew-1{
   margin-top: 0;
 }
+.container-fluid video{
+position: relative;
+left:0;
+  width:100%;
+}
+
+.foot2 h4,ul li a,i{
+  margin-left: 0;
+   }
+   .container-fluid video{
+    margin-left: 25px;
+    width:100%;
+  }
+  
+}
+/* Responsive tweaks for small screens */
+@media (max-width: 768px) {
+  .marquee-img {
+    max-height: 50px;
+    margin: 0 10px;
+  }
 }
 
   </style>
@@ -383,14 +620,7 @@ margin: 0;
 
 <nav>
   <div class="nav-container">
-   <!--- <div class="brand">
-      <a href="#"><img src="/Vite + React_files/PFI_LOGO_SPIN_PNG-removebg-preview.png" alt="Logo"></a>
-      <img src="/Assets/blog4.png" alt="Brand Banner" width="150">
-    </div>-->
-  <!----  <div class="brand">
-    <img src="./Assets/PFI_LOGO_SPIN_PNG-removebg-preview.png" class="logo" alt="Spinning Logo" >
-        <img src="/Assets/blog4.png" class="text-logo" alt="Text Logo" width="300px">
-      </div>-->
+  
       <div class="brand">
         <a href="index.html" class="logo-link">
           <img src="./Assets/PFI_LOGO_SPIN_PNG-removebg-preview.png" class="logo" alt="Spinning Logo">
@@ -561,12 +791,13 @@ margin: 0;
   </div>
 </nav>
 <!----Start of Bannner-->
-<!-----<div class="container-fluid">
-    <video src="./Assets/HomeBanner1.mp4" width="100%" autoplay muted></video>
-  </div>-->
-  <div class="container-fluid fullwidth-video-container">
-    <video src="./Assets/HomeBanner1.mp4" autoplay muted loop playsinline></video>
-  </div>
+
+  <!-- Fullscreen-width video section -->
+<section class="video-banner-section">
+  <div class="video-overlay"></div>
+  <video src="./Assets/HomeBanner1.mp4" autoplay muted loop playsinline class="video-banner"></video>
+</section>
+
   <!-----Grid System-->
   <div class="container-fluid">
     
@@ -576,6 +807,27 @@ margin: 0;
       <div class="col-sm-6 thumbnail" style="background-color:lavenderblush;"><img src="./Assets/pure-finest-min1.png" alt=""  class="img-rounded" width="100%" style="max-height: 400px;height:auto;"></div>
     </div>
   </div>
+<!-------Marquee scrolling-->
+<!-- Marquee wrapper -->
+<div class="marquee-wrapper">
+  <div class="marquee-inner">
+    <!-- 13 marquee images -->
+    <img src="./Assets/Vitamin B+C.png" alt="Image 1" class="marquee-img">
+    <img src="./Assets/Vegan.png" alt="Image 2" class="marquee-img">
+    <img src="./Assets/Spring Water 2.png" alt="Image 3" class="marquee-img">
+    <img src="./Assets/Plant Based.png" alt="Image 4" class="marquee-img">
+    <img src="./Assets/Organic.png" alt="Image 5" class="marquee-img">
+    <img src="./Assets/No Preservatives.png" alt="Image 6" class="marquee-img">
+    <img src="./Assets/No Artificial Colour.png" alt="Image 7" class="marquee-img">
+    <img src="./Assets/Natural ingredients.png" alt="Image 8" class="marquee-img">
+    <img src="./Assets/Guten Free.png" alt="Image 9" class="marquee-img">
+    <img src="./Assets/GMO Free.png" alt="Image 10" class="marquee-img">
+    <img src="./Assets/fair trade.png" alt="Image 11" class="marquee-img">
+    <img src="./Assets/Electrolytes.png" alt="Image 12" class="marquee-img">
+    <img src="./Assets/Antioxidant.png" alt="Image 13" class="marquee-img">
+  </div>
+</div>
+
 <!-------Bootstrap Media-->
 <div class="container-fluid">
 <div class="row">
@@ -584,136 +836,139 @@ margin: 0;
 </div>
 </div>
 </div>
-  <div class="container-fluid" style="position: relative; top:50px;" width="100%">
-   
+  <!----------->
+ 
+  
+  <div class="container thumbnail-section" style="margin-top: 50px;">
     <div class="row">
       <div class="col-md-4">
         <div class="thumbnail">
           <a href="#" target="_blank">
-            <img src="./Assets/BlogImage 2 (1).png" alt="Lights"   class="img-rounded">
-            <img src="/Assets/newsLogo 6.png" alt="" 
-            style="position: absolute;top:70px;background-color:#ffffff;
-             width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="one">
+            <div class="img-container">
+              <img src="./Assets/BlogImage 2 (1).png" alt="Lights" class="img-rounded">
+            </div>
+            <img src="/Assets/newsLogo 6.png" alt="Logo" class="logo-overlay">
             <div class="caption">
-              <p style="font-weight: 900;font-size:20px;" class="brew-1">PureFinest set to expand into Africa’s functional beverage market</p>
+              <p>PureFinest set to expand into Africa’s functional beverage market</p>
               <div class="meta-row">
                 <span class="meta-left">HEALTH</span>
-                <span class="meta-right">Oct 1st,2024</span>
+                <span class="meta-right">Oct 1st, 2024</span>
               </div>
             </div>
           </a>
         </div>
       </div>
+  
       <div class="col-md-4">
         <div class="thumbnail">
           <a href="#" target="_blank">
-            <img src="./Assets/Blog 1.jpg" alt="Nature"  class="img-rounded">
-           <img src="/Assets/newsLogo 2.png" alt="" style="position: absolute;top:70px;
-           background-color:#ffffff; width:50%;border-top-right-radius:10px;
-           border-bottom-right-radius:10px;" class="two">
+            <div class="img-container">
+              <img src="./Assets/Blog 1.jpg" alt="Nature" class="img-rounded">
+            </div>
+            <img src="/Assets/newsLogo 2.png" alt="Logo" class="logo-overlay">
             <div class="caption">
-              <p style="font-weight: 900;font-size:20px;margin-top:14px;">PureFinest Inc. is Preparing to Launch a New Line of Beverages</p>
+              <p>PureFinest Inc. is Preparing to Launch a New Line of Beverages</p>
               <div class="meta-row">
                 <span class="meta-left">HEALTH</span>
-                <span class="meta-right">Oct 1st,2024</span>
+                <span class="meta-right">Oct 1st, 2024</span>
               </div>
             </div>
           </a>
         </div>
       </div>
+  
       <div class="col-md-4">
         <div class="thumbnail">
           <a href="#" target="_blank">
-            <img src="/Assets/Blog 2.jpg" alt="Fjords"  class="img-rounded">
-            <img src="/Assets/newsLogo 1.png" alt="" style="position: absolute;
-            top:70px;background-color:#ffffff; width:50%;border-top-right-radius:10px;
-            border-bottom-right-radius:10px;" class="three">
+            <div class="img-container">
+              <img src="/Assets/Blog 2.jpg" alt="Fjords" class="img-rounded">
+            </div>
+            <img src="/Assets/newsLogo 1.png" alt="Logo" class="logo-overlay">
             <div class="caption">
-              <p style="font-weight: 900;font-size:20px; margin-top:-10px">PureFinest® Set to Launch Organic Vitamin, Sports,
-                 and Vitality Beverages Across Africa</p>
-                 <div class="meta-row">
-                  <span class="meta-left">HEALTH</span>
-                  <span class="meta-right">Oct 1st,2024</span>
-                </div>
+              <p>PureFinest® Set to Launch Organic Vitamin, Sports, and Vitality Beverages Across Africa</p>
+              <div class="meta-row">
+                <span class="meta-left">HEALTH</span>
+                <span class="meta-right">Oct 1st, 2024</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Second Row -->
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="#" target="_blank">
+            <div class="img-container">
+              <img src="./Assets/BlogImage 2 (1).png" alt="Lights" class="img-rounded">
+            </div>
+            <img src="/Assets/newsLogo 3.png" alt="Logo" class="logo-overlay">
+            <div class="caption">
+              <p>PureFinest set to expand into Africa’s functional beverage market</p>
+              <div class="meta-row">
+                <span class="meta-left">HEALTH</span>
+                <span class="meta-right">Oct 1st, 2024</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="#" target="_blank">
+            <div class="img-container">
+              <img src="./Assets/BlogImage 2.png" alt="Nature" class="img-rounded">
+            </div>
+            <img src="/Assets/newsLogo 4.png" alt="Logo" class="logo-overlay">
+            <div class="caption">
+              <p>PureFinest Inc. is Preparing to Launch a New Line of Beverages</p>
+              <div class="meta-row">
+                <span class="meta-left">HEALTH</span>
+                <span class="meta-right">Oct 1st, 2024</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="#" target="_blank">
+            <div class="img-container">
+              <img src="/Assets/BlogImage 2.png" alt="Fjords" class="img-rounded">
+            </div>
+            <img src="/Assets/newsLogo 5.png" alt="Logo" class="logo-overlay">
+            <div class="caption">
+              <p>PureFinest® Set to Launch Organic Vitamin, Sports, and Vitality Beverages Across Africa</p>
+              <div class="meta-row">
+                <span class="meta-left">HEALTH</span>
+                <span class="meta-right">Oct 1st, 2024</span>
+              </div>
             </div>
           </a>
         </div>
       </div>
     </div>
   </div>
-  <!---Start of second Image-->
-  <div class="container-fluid" style="position: relative;top: 100px;">
-     
-    <div class="row">
-      <div class="col-md-4">
-        <div class="thumbnail">
-          <a href="#" target="_blank">
-            <img src="/Assets/BlogImage 2.png" alt="Lights" >
-            <img src="/Assets/newsLogo 5.png" alt="" 
-            style="position: absolute;top:70px;background-color:#ffffff;
-             width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="four">
-            <div class="caption">
-              <p style="font-weight: 900;font-size:20px; margin-top:70px">PureFinest set to expand into Africa’s functional beverage market</p>
-              <div class="meta-row">
-                <span class="meta-left">HEALTH</span>
-                <span class="meta-right">Oct 1st,2024</span>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="thumbnail">
-          <a href="#" target="_blank">
-            <img src="/Assets/BlogImage 2.png" alt="Nature" class="img-rounded">
-            <img src="/Assets/newsLogo 3.png" alt=""
-             style="position: absolute;top:70px;background-color:#ffffff; 
-             width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="five">
-            <div class="caption">
-              <p style="font-weight: 900; font-size:20px; margin-top:70px;">PureFinest Inc. is Preparing to Launch a New Line of Beverages</p>
-              <div class="meta-row">
-                <span class="meta-left">HEALTH</span>
-                <span class="meta-right">Oct 1st,2024</span>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="thumbnail">
-          <a href="#" target="_blank">
-            <img src="/Assets/BlogImage 2.png" alt="Fjords"  class="img-rounded">
-            <img src="/Assets/newsLogo 4.png" alt="" style="position: 
-            absolute;top:70px;background-color:#ffffff; 
-            width:50%;border-top-right-radius:10px;border-bottom-right-radius:10px;" class="six">
-            <div class="caption">
-              <p style="font-weight: 900;font-size:20px;margin-top:40px;">PureFinest® Set to Launch Organic Vitamin, Sports, and Vitality Beverages Across Africa</p>
-           <div class="meta-row">
-            <span class="meta-left">HEALTH</span>
-            <span class="meta-right">Oct 1st,2024</span>
-          </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
 <!-----top of footer-->
 
   <div class="container-fluid" style="margin-top: 100px; width: 100vw; padding: 0; margin: 0;">
     <div style="position: relative; background-color: transparent; line-height: 0;" class="foot-2">
       <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100vw; height: 300px;
        transform: scaleY(-1);">
-        <path fill="#378537" d="M0,32L60,42.7C120,53,240,75,360,74.7C480,75,600,53,720,53.3C840,53,960,75,
-        1080,80C1200,85,1320,75,1380,69.3L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,
-        0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+     
+        <path fill="#254125" d="M0,32L60,42.7C120,53,240,65,360,70C480,74,600,76,720,76C840,75,900,74,960,70C1020,66,1080,62,1200,64C1320,68,1380,72,1440,76L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"/>
+
       </svg>
     </div>
   </div>
   
   <!-- Start of Footer -->
-  <footer class=" container-fluid footer" style="background-color: #378537; padding: 30px 0; color: white; margin-top: -120px;width:100vw;">
+  <footer class=" container-fluid footer" style="background-color: #254125; padding: 30px 0; color: white; margin-top: -120px;width:100vw;">
     <div class="container-fluid">
       <div class="row">
         <!-- Logo -->
