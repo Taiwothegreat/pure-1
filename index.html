@@ -91,35 +91,30 @@ box-sizing: border-box;
     object-fit: contain;
 }
 /*new for banner video*/
-.video-banner-section {
-  width: 100vw;
-  overflow: hidden;
-  position: relative;
-  padding: 0;
-  margin: 0;
-  z-index: 0;
-}
+  .video-banner-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: black; /* fallback background */
+  }
 
-.video-banner {
-  width: 100vw;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  z-index: 0;
-  margin-left: 0;
-}
+  .video-banner-section .video-banner {
+    width: 100%;
+    max-height: 400px; /* adjust height as needed */
+    object-fit: contain;
+    display: block;
+  }
 
-/* Overlay to darken the video */
-.video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* darker if needed */
-  z-index: 1;
-  pointer-events: none;
-}
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Add overlay color or gradient if needed */
+    z-index: 1;
+  }
+
 
 .foot2 h4,ul li a,i{
   margin-left: 0px;
@@ -954,6 +949,18 @@ left:0;
   .row > div {
     margin-bottom: 20px;
   }
+  .dark-video{
+    width: 100vw !important; 
+    height: 300px !important;
+     object-fit: fill !important;
+      display: block !important;
+       margin: 0 !important; 
+       padding: 0 !important; 
+       z-index: 0 !important;
+  }
+  .cut{
+    margin-top: 0 !important;
+  }
 }
 
   </style>
@@ -1136,10 +1143,24 @@ left:0;
 <!----Start of Bannner-->
 
   <!-- Fullscreen-width video section -->
-<section class="video-banner-section">
+<!----<section class="video-banner-section">
   <div class="video-overlay"></div>
   <video src="./Assets/HomeBanner1.mp4" autoplay muted loop playsinline class="video-banner"></video>
+</section>-->
+<!-- Fullscreen-width video section -->
+<section style="position: relative; width: 100%; overflow: hidden; margin: 0; padding: 0;">
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; background: rgba(0, 0, 0, 0.3);"></div>
+  
+  <video
+    src="./Assets/HomeBanner1.mp4"
+    autoplay
+    muted
+    loop
+    playsinline
+    style="width: 100vw; height: 600px; object-fit: fill; display: block; margin: 0; padding: 0; z-index: 0;" class="dark-video">
+  </video>
 </section>
+
 
   <!-----Grid System-->
  <!---- <div class="container-fluid">
@@ -1155,18 +1176,24 @@ left:0;
     
     <!-- Text Column -->
     <div class="col-xs-12 col-sm-6" style="display: flex; flex-direction: column; justify-content: center;">
-      <h1 style="font-weight: 900; margin-top: 20px; text-align: center;">A CUT ABOVE THE REST</h1>
+      <h1 style="font-weight: 900; margin-top: 140px; text-align: center;" class="cut">A CUT ABOVE THE REST</h1>
       <p style="word-spacing: 10px; font-size: 20px; text-align: justify; padding: 20px;">
         At Pure Finest Inc., caring for life is at the core of everything we do. We believe in creating food and drinks that nourish the Body, Mind, and spirit and inspire a healthier, more sustainable future. By refusing to cut corners, we ensure that every product is crafted with the finest premium ingredients, upholding our commitment to quality and well-being. From our sourcing practices to the final product, we prioritize excellence to deliver brands that truly make a difference in every sip and bite.
       </p>
     </div>
 
     <!-- Image Column -->
-   <div class="col-xs-12 col-sm-6" style="background-color: lavenderblush; display: flex; align-items: center; 
+   <!-----<div class="col-xs-12 col-sm-6" style="background-color: lavenderblush; display: flex; align-items: center; 
    justify-content: center; padding: 0;">
   <div class="thumbnail" style="margin: 0; padding: 0; border: none; background: none;">
     <img src="./Assets/pure-finest-min1.png" alt="Pure Finest" class="img-rounded img-responsive" style="display: block; width: 100%; height: auto;">
   </div>
+</div>-->
+<div class="col-xs-12 col-sm-6" style="padding: 0; margin: 0; display: flex; justify-content: center; align-items: center; background: none;">
+  <img
+    src="./Assets/pure-finest-min1.png"
+    alt="Pure Finest"
+    style="width: 100%; max-width: 640px; height: auto; display: block; margin: 0; padding: 0; border: none; background: none;">
 </div>
 
     
