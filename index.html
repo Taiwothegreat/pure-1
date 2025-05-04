@@ -368,7 +368,7 @@ li a{
 }
 .mobile-version-1 a,.mobile-version-2 a,
 .mobile-version-3 a,.mobile-version-4 a,.mobile-version-5 a{
- font-size: 18px !important;
+ font-size: 20px !important;
  /*font-family: 'Playfair Display', serif;*/
  font-family: 'Saira Stencil One', sans-serif;
 
@@ -382,6 +382,7 @@ p,li,h1,h3,h2{
   width: 100%;
   background: #fff;
   padding: 10px 0;
+  margin-top: 50px;
 }
 
 .marquee-inner {
@@ -471,10 +472,10 @@ p,li,h1,h3,h2{
     padding:0px;
     text-align: justify;
   }
-  .foot-svg{
+  /*.foot-svg{
     width:100vw;
     margin-top: 300px;
-  }
+  }*/
 /*Meta row*/
 .meta-row {
   display: flex;
@@ -491,7 +492,7 @@ p,li,h1,h3,h2{
   display: inline-block;
 }
 .company{
-  margin-left: 100px;
+  margin-left: 150px;
 }
 /*thumbnail newest*/
 /*.thumbnail {
@@ -694,7 +695,9 @@ p,li,h1,h3,h2{
   font-size: 0.85em;
   margin-top: 5px;
 }
-
+.news{
+  margin-top: 30px;
+}
 /*.img-container {
   width: 100%;
   height: 220px;
@@ -737,6 +740,51 @@ p,li,h1,h3,h2{
 }*/
 .footer-select{
   margin-top: 100px;
+}
+/*Footer new*/
+.footer-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.footer-wave {
+  width: 100%;
+  line-height: 0;
+  overflow: hidden;
+  margin-bottom: -5px;
+}
+
+.footer-wave svg {
+  display: block;
+  width: 100%;
+height: 80px; /* ⬇️ Wave height reduced from 300px to 120px */
+}
+
+.footer {
+  background-color: #254125;
+  color: white;
+ /*padding: 30px 20px 20px 20px;*/ /* ⬇️ Footer padding reduced from 50px top to 30px */
+}
+
+.footer-logo {
+  max-height: 240px; /* ⬆️ Increased logo size */
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.language-selector {
+  width: 200px;
+  background-color: #29226b;
+  color: #ffffff;
+  margin-left: auto;
+  margin-top: 120px;
+}
+
+.follow-us {
+  font-size: 20px;
 }
 @media (max-width: 768px) {
 .mobile-version-1,.mobile-version-2,
@@ -829,12 +877,12 @@ font-family: Arial, sans-serif;
 position: absolute;
 top:18px;
 }
-.footer{
+/*.footer{
   margin-top:-10px;
  margin-left: 0;
  width:100vw;
  
-}
+}*/
 .thumbnail{
   margin-left: 30px;
 }
@@ -873,18 +921,38 @@ left:0;
   .text-right{
     text-align: center;
   }
-  .form-control{
+ /* .form-control{
     margin:auto;
-  }
+  }*/
   .follow-us{
     color: green;
   }
-  .footer-logo{
+  /*.footer-logo{
     margin: auto !important;
-  }
+  }*/
   .video-banner-section{
     width: 100vw;
     
+  }
+  /*Footer new*/
+  .footer-logo {
+    margin-top: 80px;
+    max-height: 240px; /* smaller logo on mobile */
+    margin-bottom: 20px;
+  }
+
+  .language-selector {
+    width: 100%;
+  }
+
+  .footer {
+   padding: 20px 15px 15px 15px;
+    text-align: center;
+
+  }
+
+  .row > div {
+    margin-bottom: 20px;
   }
 }
 
@@ -1074,14 +1142,36 @@ left:0;
 </section>
 
   <!-----Grid System-->
-  <div class="container-fluid">
+ <!---- <div class="container-fluid">
     
     <div class="row" style="width: 100%;max-height:100%;">
       <div class="col-sm-6"><h1 style="font-weight: 900;margin-top:60px;text-align:center;">A CUT ABOVE THE REST</h1>
         <p style="word-spacing:10px;font-size:20px;text-align:justify;" class="cut-text">At Pure Finest Inc., caring for life is at the core of everything we do. We believe in creating food and drinks that nourish the Body, Mind, and spirit and inspire a healthier, more sustainable future. By refusing to cut corners, we ensure that every product is crafted with the finest premium ingredients, upholding our commitment to quality and well-being. From our sourcing practices to the final product, we prioritize excellence to deliver brands that truly make a difference in every sip and bite.</p></div>
       <div class="col-sm-6 thumbnail gold" style="background-color:lavenderblush;"><img src="./Assets/pure-finest-min1.png" alt=""  class="img-rounded" width="100%" style="max-height: 400px;height:auto;"></div>
     </div>
+  </div>-->
+  <div class="container-fluid">
+  <div class="row" style="width: 100%; padding: 40px 0;">
+    
+    <!-- Text Column -->
+    <div class="col-xs-12 col-sm-6" style="display: flex; flex-direction: column; justify-content: center;">
+      <h1 style="font-weight: 900; margin-top: 20px; text-align: center;">A CUT ABOVE THE REST</h1>
+      <p style="word-spacing: 10px; font-size: 20px; text-align: justify; padding: 20px;">
+        At Pure Finest Inc., caring for life is at the core of everything we do. We believe in creating food and drinks that nourish the Body, Mind, and spirit and inspire a healthier, more sustainable future. By refusing to cut corners, we ensure that every product is crafted with the finest premium ingredients, upholding our commitment to quality and well-being. From our sourcing practices to the final product, we prioritize excellence to deliver brands that truly make a difference in every sip and bite.
+      </p>
+    </div>
+
+    <!-- Image Column -->
+   <div class="col-xs-12 col-sm-6" style="background-color: lavenderblush; display: flex; align-items: center; 
+   justify-content: center; padding: 0;">
+  <div class="thumbnail" style="margin: 0; padding: 0; border: none; background: none;">
+    <img src="./Assets/pure-finest-min1.png" alt="Pure Finest" class="img-rounded img-responsive" style="display: block; width: 100%; height: auto;">
   </div>
+</div>
+
+    
+</div>
+
 <!-------Marquee scrolling-->
 <!-- Marquee wrapper -->
 <div class="marquee-wrapper">
@@ -1119,7 +1209,7 @@ left:0;
 </div>
 <div class="container-fluid">
 <div class="row">
-<div class="col-sm-12">
+<div class="col-sm-12 news">
 <h1 style="font-weight: 900;margin-left:90px; text-align:center">NEWS AND PRESS RELEASE</h1>
 </div>
 </div>
@@ -1242,33 +1332,9 @@ left:0;
 
 <!-----top of footer-->
 <!-- Footer Section (Full width, isolated, no side effects) -->
-<div class="footer-wrapper" style="margin: 0; padding: 0; width: 100%; overflow: hidden;">
+<!------<div class="footer-wrapper" style="margin: 0; padding: 0; width: 100%; overflow: hidden;">
 
-  <!-- SVG Background Wave (Flipped) -->
-  <!----<div style="width: 100%; line-height: 0;" class="foot-svg">
-    <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg"
-         style="display: block; width: 100%; height: 300px; transform:
-          scaleY(-1);">
-      <path d="M1071.86 35C1205.47 35 1323.62 51 1366 59V0H0V24C72.2883
-       31.6667 263.728 47 451.179 47C685.493 47 904.85 35 1071.86 35Z"
-            fill="#254125"></path>
-    </svg>
-  </div>-->
-  <!---<div style="line-height: 0;">
-    <svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg"
-         preserveAspectRatio="none"
-         style="display: block; width: 100%; height: 300px; transform: scaleY(-1);">
-      <path d="M0,64 C360,160 1080,-32 1440,64 L1440,150 L0,150 Z" fill="#254125" />
-    </svg>
-  </div>-->
- <!---- <div style="width: 100%; line-height: 0; overflow: hidden;">
-    <svg viewBox="0 0 1440 320"
-         xmlns="http://www.w3.org/2000/svg"
-         preserveAspectRatio="none"
-         style="display: block; width: 100%; height: 300px; transform: scaleY(-1);">
-      <path fill="#254125" d="M0,192 C360,96 1080,288 1440,192 L1440,320 L0,320 Z"></path>
-    </svg>
-  </div>-->
+ 
   <div style="width: 100%; line-height: 0; overflow: hidden;">
     <svg viewBox="0 0 1440 320"
          xmlns="http://www.w3.org/2000/svg"
@@ -1276,15 +1342,15 @@ left:0;
          style="display: block; width: 100%; height: 300px;">
       <path fill="#254125" d="M0,192 C360,96 1080,288 1440,192 L1440,320 L0,320 Z"></path>
     </svg>
-  </div>
+  </div>-->
   
   <!-- Footer Content -->
-  <footer class="footer" style="background-color: #254125; color: white; padding: 50px 20px 30px 20px;">
+<!------  <footer class="footer" style="background-color: #254125; color: white; padding: 50px 20px 30px 20px;">
 
-    <div class="container">
+    <div class="container">-->
 
       <!-- Top Row: Logo & Language Selector -->
-      <div class="row align-items-center mb-4">
+     <!------- <div class="row align-items-center mb-4">
         <div class="col-sm-6">
           <img src="/Assets/Footer logo.png" alt="The Coca Cola Company Logo" style="max-height: 200px;" class="footer-logo;">
         </div>
@@ -1306,12 +1372,12 @@ left:0;
         </div>
       </div>
 
-      <hr style="border-color: #fff;">
+      <hr style="border-color: #fff;">-->
 
       <!-- Middle Row: Links and Social Media -->
-      <div class="row mb-4">
+      <!------<div class="row mb-4">-->
         <!-- Useful Links -->
-        <div class="col-sm-3">
+        <!------<div class="col-sm-3">
           <h4 style="font-size: 20px;">Useful Links</h4>
           <ul class="list-unstyled">
             <li><a href="#" class="text-white">Sustainability</a></li>
@@ -1319,10 +1385,10 @@ left:0;
             <li><a href="#" class="text-white">Terms Of Use</a></li>
             <li><a href="#" class="text-white">Brands Protection</a></li>
           </ul>
-        </div>
+        </div>-->
 
         <!-- Information Links -->
-        <div class="col-sm-3">
+       <!---- <div class="col-sm-3">
           <h4 style="font-size: 20px;">Information</h4>
           <ul class="list-unstyled">
             <li><a href="#" class="text-white">Cookies Setting</a></li>
@@ -1330,12 +1396,96 @@ left:0;
             <li><a href="#" class="text-white">Fraud Warning</a></li>
             <li><a href="#" class="text-white">Privacy Policy</a></li>
           </ul>
-        </div>
+        </div>-->
 
         <!-- Spacer -->
-        <div class="col-sm-3"></div>
+     <!----   <div class="col-sm-3"></div>-->
 
         <!-- Social Media -->
+     <!-----   <div class="col-sm-3">
+          <h4 class="follow-us">Follow Us</h4>
+          <i class="fab fa-tiktok fa-2x me-2"></i>
+          <i class="fab fa-twitter fa-2x me-2"></i>
+          <i class="fab fa-instagram fa-2x me-2"></i>
+          <i class="fab fa-threads fa-2x"></i>
+        </div>
+      </div>
+
+      <hr style="border-color: #fff;">-->
+
+      <!-- Footer Note -->
+     <!------ <div class="row text-center">
+        <div class="col-12 text-right">
+          <p style="font-size: 20px;">© 2025. The Pure Finest Inc.® Company. All rights reserved.</p>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+</div>-->
+<!-- Footer Section (Full width, isolated, no side effects) -->
+<div class="footer-wrapper" style="margin: 0; padding: 0; width: 100%; overflow: hidden;">
+
+  <!-- SVG Wave -->
+  <div style="width: 100%; line-height: 0; overflow: hidden; margin-bottom: -5px;">
+    <svg viewBox="0 0 1440 320"
+         xmlns="http://www.w3.org/2000/svg"
+         preserveAspectRatio="none"
+         style="display: block; width: 100%; height: 80px;">
+      <path fill="#254125" d="M0,192 C360,96 1080,288 1440,192 L1440,320 L0,320 Z"></path>
+    </svg>
+  </div>
+
+  <!-- Footer Content -->
+  <!-- Footer Content -->
+  <footer class="footer">
+    <div class="container">
+      <!-- Top Row: Logo & Language Selector -->
+      <div class="row align-items-center mb-4">
+        <div class="col-sm-6 d-flex align-items-center">
+          <img src="/Assets/Footer logo.png" alt="The Coca Cola Company Logo" class="footer-logo">
+        </div>
+        <div class="col-sm-6 text-sm-end mt-3 mt-sm-0 d-flex justify-content-sm-end align-items-center">
+          <select class="form-control language-selector" >
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="dt">Dutch</option>
+            <option value="ar">Arabic</option>
+            <option value="ch">Chinese</option>
+            <option value="pt">Portuguese</option>
+            <option value="rs">Russian</option>
+            <option value="tr">Turkish</option>
+            <option value="yr">Yoruba</option>
+            <option value="ig">Igbo</option>
+            <option value="ha">Hausa</option>
+          </select>
+        </div>
+      </div>
+
+      <hr style="border-color: #fff;">
+
+      <!-- Middle Row -->
+      <div class="row mb-4">
+        <div class="col-sm-3">
+          <h4>Useful Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Sustainability</a></li>
+            <li><a href="#" class="text-white">Responsibility</a></li>
+            <li><a href="#" class="text-white">Terms Of Use</a></li>
+            <li><a href="#" class="text-white">Brands Protection</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-3">
+          <h4>Information</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Cookies Setting</a></li>
+            <li><a href="#" class="text-white">Imprint</a></li>
+            <li><a href="#" class="text-white">Fraud Warning</a></li>
+            <li><a href="#" class="text-white">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-3"></div>
         <div class="col-sm-3">
           <h4 class="follow-us">Follow Us</h4>
           <i class="fab fa-tiktok fa-2x me-2"></i>
@@ -1350,10 +1500,9 @@ left:0;
       <!-- Footer Note -->
       <div class="row text-center">
         <div class="col-12 text-right">
-          <p style="font-size: 20px;">© 2025. The Pure Finest Inc.® Company. All rights reserved.</p>
+          <p style="font-size: 20px;">© 2025. The Pure Finest Inc.<span><sup>&reg;</sup></span> Company. All rights reserved.</p>
         </div>
       </div>
-
     </div>
   </footer>
 </div>
