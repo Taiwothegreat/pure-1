@@ -1053,6 +1053,7 @@ left:0;
   margin-top: 20px;
   
 }*/
+
 /* ---------------- Desktop Styles (≥ 992px) ---------------- */
 @media screen and (min-width: 992px) {
   .company {
@@ -1075,7 +1076,7 @@ left:0;
     border-top: 10px solid #c04141;
     margin-left: -200px !important;
     width: 100vw !important;
-    height: 60vh;
+    height: 70vh;
     margin-top: 20px;
   }
 
@@ -1098,59 +1099,92 @@ left:0;
 
 /* ---------------- Mobile Styles (< 992px) ---------------- */
 @media screen and (max-width: 991px) {
+  /* General mobile dropdown container */
+  .dropdown-menu {
+    position: static !important;
+    width: 100% !important;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+  }
+
+  .dropdown-content {
+    display: block !important;
+    padding: 10px 15px;
+    margin: 0;
+  }
+
+  .dropdown-content div {
+    width: 100% !important;
+    margin: 10px 0 0 0 !important;
+    padding: 10px 0;
+    text-align: left;
+    box-sizing: border-box;
+  }
+
+  .dropdown-content h2,
+  .dropdown-content h5,
+  .dropdown-content p,
+  .dropdown-content ul,
+  .dropdown-content li,
+  .dropdown-content button,
+  .dropdown-content a {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    text-align: left !important;
+  }
+
+  /* Section-specific styles */
   .company,
   .labels,
   .social,
   .media-center,
   .careers {
-    width: auto !important;
+    width: 100% !important;
     margin-left: 0 !important;
-    height: auto;
     margin-top: 20px;
     padding: 15px;
     box-sizing: border-box;
   }
 
-  .company {
-    border-top: 10px solid #6ccb35;
-  }
-
-  .labels {
-    border-top: 10px solid #ffa500;
-  }
-
-  .social {
-    border-top: 10px solid #c04141;
-  }
-
-  .media-center {
-    border-top: 10px solid #755353;
-  }
-
-  .careers {
-    border-top: 10px solid #0000ff;
-  }
-
-  .dropdown-content div {
-    margin-left: 0 !important;
-    width: 100%;
-  }
+  .company    { border-top: 10px solid #6ccb35; }
+  .labels     { border-top: 10px solid #ffa500; }
+  .social     { border-top: 10px solid #c04141; }
+  .media-center { border-top: 10px solid #755353; }
+  .careers    { border-top: 10px solid #0000ff; }
 }
 @media screen and (max-width: 991px) {
-  .company {
-    border-top: 10px solid #6ccb35;
-    margin-left: 0 !important;
-    padding: 20px !important;
-    width: 100% !important;
-    height: auto !important;
-    box-sizing: border-box;
-    display: block;
-    text-align: left; /* ensures text aligns left */
+  .footer .row {
+    text-align: center !important;
+    justify-content: center !important;
   }
 
-  .company * {
-    margin-left: 0 !important; /* resets inner elements */
-    text-align: left !important; /* aligns any inner content */
+  .footer .col-sm-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .footer-logo {
+    justify-content: center;
+    margin-left: 80px;
+  }
+
+  .footer .list-unstyled {
+    padding: 0;
+  }
+
+  .footer select.language-selector {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .footer .social-icons {
+    margin-top: 10px;
+  }
+  .footee{
+    text-align: center;
+    margin-left: 0;
   }
 }
 
@@ -1191,9 +1225,12 @@ left:0;
       <img src="./Assets/Antioxidant.png" alt="Antioxidant" class="marquee-img">
     </div>
   </div>
-<nav>
-  
-  <div class="nav-container">
+  <nav>
+    <div class="nav-container">
+     <!--- <div class="brand">
+        <a href="#"><img src="/Vite + React_files/PFI_LOGO_SPIN_PNG-removebg-preview.png" alt="Logo"></a>
+        <img src="/Assets/blog4.png" alt="Brand Banner" width="150">
+      </div>-->
   
       <div class="brand">
         <a href="index.html" class="logo-link">
@@ -1202,205 +1239,166 @@ left:0;
         <img src="/Assets/blog4.png" class="text-logo" alt="Text Logo" width="300px">
       </div>
       
-    <div class="menu-toggle" id="menu-toggle">
-      <span></span><span></span><span></span>
-    </div>
-
-    <ul class="nav" id="main-nav">
-      <li class="mobile-version-1 who "><a href="#">Our Company <i class="fa fa-caret-down"></i></a>
-        <div class="dropdown-menu company">
-      
-          <div class="dropdown-content">
-            <div>
-              <h2 style="margin-left:200px; " >15+ <br>Years of Crafting Excellence</h2>
-              <p style="margin-left:200px;">Since 2010, Pure Finest Inc. has been redefining food and beverage standards, making a difference with premium products
-                 that inspire wellness, sustainability, and innovation. Explore our Story, Purpose, and Vision and more</p>
-              <button style="background-color: #6ccb35;border-radius:10px;text-decoration:none"><a href="who-we-are.html">LEARN MORE</a></button>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span><span></span><span></span>
+      </div>
+  
+      <ul class="nav" id="main-nav">
+        <li class="mobile-version-1 "><a href="#">Our Company <i class="fa fa-caret-down"></i></a>
+          <div class="dropdown-menu company">
+            <!-- repeat content as above -->
+            <div class="dropdown-content">
+              <div>
+                <h2>15+ <br>Years of Crafting Excellence</h2>
+                <p>Since 2010, Pure Finest Inc. has been redefining food and beverage standards, making a difference with premium products
+                   that inspire wellness, sustainability, and innovation. Explore our Story, Purpose, and Vision and more</p>
+                <button style="background-color: #6ccb35;border-radius:10px;text-decoration:none"><a href="who-we-are.html">LEARN MORE</a></button>
+              </div>
+              <div>
+                <h5 class="who"><a href="who-we-are.html">Who We Are</a></h5>
+                <ul><li title="We are focused on foods and beverages creating premium, plant-based,
+                   and natural foods and drinks. Offerings include REDEFINING REFRESHMENT
+                    WITH INTEGRITY AND INNOVATION vitality, vitamins, sports, drinks, and well-being foods made with organic ingredients to promote health and well-being. The company is known for using high-quality premium ingredients, alongside other carefully selected components designed to revitalize both body and soul. We ensure 
+                  our brands are sustainable and beneficial for overall vitality,
+                   appealing to health-conscious consumers.">Overview</li><li title="Inspired by the holistic wellness traditions of the plant-based finest ingredients, PureFinest® Natural Vitamin, Sports, and Vitality Drinks were born from the vision of Beulah Group Inc. in early 2016. Driven by a passion for organic ingredients and cutting-edge nutritional science, BGI crafted a line of beverages that not only revitalize the body but also nourish the soul. Pre-launched in the heart of London, England, on March 15, 2023, PureFinest® redefined the functional drink market by introducing a range that enhances everyday health with superior, organically sourced ingredients. Committed to purity and performance, PureFinest® 
+                   has ushered in a new era of wellness beverages,
+                    seamlessly blending ancient wisdom with modern vitality.">Origin</li><li title="Inspired by the holistic wellness traditions of the plant-based finest ingredients, PureFinest® Natural Vitamin, Sports, and Vitality Drinks were born from the vision of Beulah Group Inc. in early 2016. Driven by a passion for organic ingredients and cutting-edge nutritional science, BGI crafted a line of beverages that not only revitalize the body but also nourish the soul. Pre-launched in the heart of London, England, on March 15, 2023, PureFinest® redefined the functional drink market by introducing a range that enhances everyday health with superior, organically sourced ingredients. Committed to purity and performance, PureFinest®
+                     has ushered in a new era of wellness beverages, 
+                     seamlessly blending ancient wisdom with modern vitality.">Our Drive</li><li>Our Successful Milestones</li></ul>
+              </div>
+              <div>
+                <h5 style="text-decoration: underline;" class="who"><a href="thepfiway.html">The PFI Way</a></h5>
+                <ul><li title="Our mission is to enhance lives by offering high-quality food and
+                   beverages that inspire joy, promote well-being, and deliver
+                    satisfaction to the body and soul. We strive 
+                  to be a reliable provider of innovative, wholesome products,
+                   thoughtfully created with care and excellence.">Our Purpose</li><li title="A vision of a future where every bite and sip support sustainability, exceptional quality, and well-being. We aspire to create a world where our food and 
+                   beverages not only satisfy but also foster healthier lifestyles 
+                   and contribute to a more sustainable planet.">Our Vision</li><li title="With a commitment to quality and a focus on customer satisfaction, we blend premium ingredients, innovative technology, and eco-friendly methods to create food and beverages that excel in flavor and leave a lasting positive impact. This holistic approach ensures that everything we create 
+                   not only delights the palate but also aligns with our values of wellness, 
+                   sustainability, and innovation.">Our Approach</li></ul>
+              </div>
             </div>
-            <div>
-              <h5 class="who" style="margin-left: 200px;text-decoration:underline;"><a href="who-we-are.html">Who We Are</a></h5>
-              <ul style="margin-left: 200px;text-align:justify;"><li title="We are focused on foods and beverages creating premium, plant-based,
-                 and natural foods and drinks. Offerings include REDEFINING REFRESHMENT
-                  WITH INTEGRITY AND INNOVATION vitality, vitamins, sports, drinks, and well-being foods made with organic ingredients to promote health and well-being. The company is known for using high-quality premium ingredients, alongside other carefully selected components designed to revitalize both body and soul. We ensure 
-                our brands are sustainable and beneficial for overall vitality,
-                 appealing to health-conscious consumers.">Overview</li><li title="Inspired by the holistic wellness traditions of the plant-based finest ingredients, PureFinest® Natural Vitamin, Sports, and Vitality Drinks were born from the vision of Beulah Group Inc. in early 2016. Driven by a passion for organic ingredients and cutting-edge nutritional science, BGI crafted a line of beverages that not only revitalize the body but also nourish the soul. Pre-launched in the heart of London, England, on March 15, 2023, PureFinest® redefined the functional drink market by introducing a range that enhances everyday health with superior, organically sourced ingredients. Committed to purity and performance, PureFinest® 
-                 has ushered in a new era of wellness beverages,
-                  seamlessly blending ancient wisdom with modern vitality.">Origin</li><li title="Inspired by the holistic wellness traditions of the plant-based finest ingredients, PureFinest® Natural Vitamin, Sports, and Vitality Drinks were born from the vision of Beulah Group Inc. in early 2016. Driven by a passion for organic ingredients and cutting-edge nutritional science, BGI crafted a line of beverages that not only revitalize the body but also nourish the soul. Pre-launched in the heart of London, England, on March 15, 2023, PureFinest® redefined the functional drink market by introducing a range that enhances everyday health with superior, organically sourced ingredients. Committed to purity and performance, PureFinest®
-                   has ushered in a new era of wellness beverages, 
-                   seamlessly blending ancient wisdom with modern vitality.">Our Drive</li><li>Our Successful Milestones</li></ul>
-            </div>
-            <div>
-              <h5 style="text-decoration: underline;" class="who"><a href="thepfiway.html">The PFI Way</a></h5>
-              <ul><li title="Our mission is to enhance lives by offering high-quality food and
-                 beverages that inspire joy, promote well-being, and deliver
-                  satisfaction to the body and soul. We strive 
-                to be a reliable provider of innovative, wholesome products,
-                 thoughtfully created with care and excellence.">Our Purpose</li><li title="A vision of a future where every bite and sip support sustainability, exceptional quality, and well-being. We aspire to create a world where our food and 
-                 beverages not only satisfy but also foster healthier lifestyles 
-                 and contribute to a more sustainable planet.">Our Vision</li><li title="With a commitment to quality and a focus on customer satisfaction, we blend premium ingredients, innovative technology, and eco-friendly methods to create food and beverages that excel in flavor and leave a lasting positive impact. This holistic approach ensures that everything we create 
-                 not only delights the palate but also aligns with our values of wellness, 
-                 sustainability, and innovation.">Our Approach</li></ul>
-            </div>
-          </div>
-        </div></li>
-
-      <li class="mobile-version-2 who" style="text-decoration: none; ">
-        <a href="#">Labels<i class="fa fa-caret-down"></i></a>
-       
-        <div class="dropdown-menu labels">
-          <div class="dropdown-content">
-            <div>
-              <h2 style="margin-left:0">10+ <br> BRANDS, ONE VISION</h2>
-              <p style="margin-left:0">Pure Finest Inc. has built a portfolio of 10 premium brands designed to thrive in today’s dynamic marketplace.</p>
-              <button style="background: #ffa500;border-radius:10px;width:350px;margin-top:50px;margin-left:0;" class="who">
-                <a href="brands.html">DISCOVER OUR BRANDS</a>
-              </button>
-            </div>
-            <div>
-              <h5 style="text-decoration: underline;" class="who"><a href="brands.html">Hydration & Vitality</a></h5>
-              <ul >
-               <a href="finest.html"> <li>PureFinest®</li></a>
-               <a href="finest.html"> <li>Elysium Alps®</li></a>
-               <a href="finest.html"> <li>AlpineGlow®</li></a>
-              </ul>
-            </div>
-            <div>
-              <h5 style="text-decoration: underline;" class="who"><a href="brands.html">Juice & Dairy</a></h5>
-              <ul>
-                <a href="finest.html"> <li>PureLife</li></a>
-                  
-               
-              </ul>
-            </div>
-            <div>
-              <h5 class="who"><a href="brands.html">Snacks</a></h5>
-              <ul style="font-weight: normal;">
-                <a href="finest.html"> <li>PureLife</li></a>
-                <a href="finest.html"> <li>Taste Me! - Feel Me!®</li></a>
-              
-              </ul>
-            </div>
-            <div>
-              <h5 class="who"><a href="brands.html">Alcohol</a></h5>
-              <ul style="font-weight: normal;">
-                <a href="finest.html"> <li>Gin</li></a>
-                <a href="finest.html"> <li>Vodka</li></a>
-                <a href="finest.html"> <li>Wine</li></a>
+          </div></li>
+  
+        <li class="mobile-version-2 who" style="text-decoration: none;">
+          <a href="#">Brands<i class="fa fa-caret-down"></i></a>
+          <div class="dropdown-menu labels">
+            <div class="dropdown-content">
+              <div>
+                <h2>10+ <br> BRANDS, ONE VISION</h2>
+                <p>Pure Finest Inc. has built a portfolio of 10 premium brands designed to thrive in today’s dynamic marketplace.</p>
+                <button style="background: #ffa500;border-radius:10px;text-decoration:none;width: 300px;" class="who"><a href="brands.html">DISCOVER OUR BRANDS</a></button>
+              </div>
+              <div>
                 
-              </ul>
+                <h5 style="text-decoration: underline;" class="who"><a href="brands.html">Hydration & Vitality</a></h5>
+                <ul><li class="who"><a href="finest.html">PureFinest®</a></li><li class="who"><a href="finest.html">Elysium Alps®</a></li><li><a href="finest.html">AlpineGlow®</a></li></ul>
+              </div>
+              <div>
+                <h5 style="text-decoration: underline;" class="who"><a href="brands.html">Juice & Dairy</a></h5>
+                <ul><li class="who"><a href="finest.html">PureLife</a></li></ul>
+              </div>
+              <div>
+                <h5 class="who"><a href="brands.html">Snacks</a></h5>
+                <ul><li class="who"><a href="finest.html">PureLife</a></li><li class="who"><a href="finest.html">Taste Me! - Feel Me!®</a></li></ul>
+              </div>
+              <div>
+                <h5 class="who"><a href="brands.html">Alcohol</a></h5>
+                <ul><li class="who"><a href="finest.html">Gin</a></li><li class="who"><a href="finest.html">Vodka</a></li><li><a href="finest.html">Wine</a></li></ul>
+  
+              </div>
             </div>
           </div>
-        </div>
-        
-      </li>
-
-      <li class="mobile-version-3 who">
-        <a href="#">Social<i class="fa fa-caret-down"></i></a>
-        <div class="dropdown-menu social">
-        
-          <div class="dropdown-content">
-            <div>
-              <h2 style="margin-left:0">PEOPLE AT THE HEART OF WHAT WE DO </h2>
-              <p style="margin-left:0">At Pure Finest Inc., we believe that people are our greatest asset.
-                 From empowering our employees to fostering meaningful connections with partners and supporting the communities 
-                we call home, we are committed to improving lives and creating a positive impact wherever we operate.</p>
-              <button style="background-color: #c04141;border-radius:10px;width:200px" class="who"><a href="people-first.html">PEOPLE FIRST</a></button>
-            </div>
-            <div>
-              <h5 class="who"><a href="edi.html">EDI</a></h5>
-              <ul><a href=""><li>Employee</li></a>
-               <a href=""> <li>Network</li></a>
-               <a href=""> <li>Headship</li></a>
-              </ul>
-            </div>
-            <div>
-              <h5 class="who"><a href="humanrights.html">Human Rights</a></h5>
-              <a href=""><ul><li>Human Rights</li></a>
-              <a href=""><li>Governance</li></a>
-          <a href="">  <li>Stories of Impact</li></a>
-          </ul>
-            </div>
-            <div>
-              <h5 class="who"><a href="sports-and-ent.html">Sports and Entertainment</a></h5>
-              <ul><a href=""><li>Sponsorship</li></a>
-              </ul>
-            </div>
-            <div>
-              <h5 class="who"><a href="pffoundation.html">The Pure Finest Foundation</a></h5>
-              <ul>
-                <a href=""><li>Partnership</li></a>
-               <a href=""> <li>Communities</li></a>
-              </ul>
+        </li>
+  
+        <li class="mobile-version-3">
+          <a href="#">Social<i class="fa fa-caret-down"></i></a>
+          <div class="dropdown-menu social">
+            <!-- repeat content as above -->
+            <div class="dropdown-content">
+              <div>
+                <h2>PEOPLE AT THE HEART OF WHAT WE DO </h2>
+                <p>At Pure Finest Inc., we believe that people are our greatest asset.
+                   From empowering our employees to fostering meaningful connections with partners and supporting the communities 
+                  we call home, we are committed to improving lives and creating a positive impact wherever we operate.</p>
+                <button style="background-color: rgb(192, 65, 65);border-radius:10px;" class="who"><a href="people-first.html">PEOPLE FIRST</a></button>
+              </div>
+              <div>
+                <h5 style="text-decoration: underline;" class="who"><a href="edi.html">EDI</a></h5>
+                <ul><li>Employee</li><li>Network</li><li>Headship</li></ul>
+              </div>
+              <div>
+                <h5 style="text-decoration: underline;" class="who"><a href="humanrights.html">Human Rights</a></h5>
+                <ul><li>Human Rights</li>
+                <li>Governance</li>
+              <li>Stories of Impact</li></ul>
+              </div>
+              <div>
+                <h5 style="text-decoration: underline;" class="who"><a href="sports-and-ent.html"></a></h5>
+                <ul><li>Sponsorship</li></ul>
+              </div>
+              <div>
+                <h5 style="text-decoration: underline;" class="who"><a href="pffoundation.html">The Pure Finest Foundation</a></h5>
+                <ul><li>Partnership</li><li>Communities</li></ul>
+              </div>
             </div>
           </div>
-        </div>
-      </li>
-
-      <li class="mobile-version-4 who">
-        <a href="#">Media Center<i class="fa fa-caret-down"></i></a>
-        <div class="dropdown-menu media-center">
-          <!-- repeat content as above -->
-          <div class="dropdown-content">
-            <div>
-              <h2 style="margin-left:0">STAY UPDATED </h2>
-              <p style="margin-left:0">Discover the latest from Pure Finest Inc. — from groundbreaking brand
-                 innovations to impactful 
-                sustainability initiatives. Explore how we’re shaping the future of food and beverages around the globe.</p>
-              <button style="background: #755353;border-radius:10px;" class="who">GET THE LATEST</button>
+        </li>
+  
+        <li class="mobile-version-4">
+          <a href="#">Media Center<i class="fa fa-caret-down"></i></a>
+          <div class="dropdown-menu media-center">
+            <!-- repeat content as above -->
+            <div class="dropdown-content">
+              <div>
+                <h2>STAY UPDATED </h2>
+                <p>Discover the latest from Pure Finest Inc. — from groundbreaking brand
+                   innovations to impactful 
+                  sustainability initiatives. Explore how we’re shaping the future of food and beverages around the globe.</p>
+                <button style="background: rgb(117, 83, 83);border-radius:10px;">GET THE LATEST</button>
+              </div>
+              <div>
+                <h5>Being Read</h5>
+                <ul><li>News & Blogs</li></ul>
+              </div>
+              <div>
+                <h5>Being Watched</h5>
+                <ul><li>Life Stream</li>
+                <li>TV</li><li>Gallery</li></ul>
+              </div>
+              <div>
+                <h5>Being Listened</h5>
+                <ul><li>Radio</li><li>Podcast</li></ul>
+              </div>
+              
             </div>
-            <div>
-              <h5 class="who" style="font-weight: 900;">Being Read</h5>
-              <ul>
-               <a href=""> <li>News & Blogs</li></a>
-              </ul>
-            </div>
-            <div>
-              <h5 class="who">Being Watched</h5>
-              <ul>
-               <a href=""> <li>Life Stream</li></a>
-             <a href=""> <li>TV</li></a>
-            <a href="">  <li>Gallery</li></a>
-            </ul>
-            </div>
-            <div>
-              <h5 class="who">Being Listened</h5>
-              <ul>
-              <a href="">  <li>Radio</li></a>
-               <a href=""> <li>Podcast</li></a>
-              </ul>
-            </div>
-            
           </div>
-        </div>
-      </li>
-
-      <li class="mobile-version-5 who">
-        <a href="#">Careers<i class="fa fa-caret-down"></i></a>
-        <div class="dropdown-menu careers">
-          <!-- repeat content as above -->
-          <div class="dropdown-content">
-            <div>
-              <h2 style="margin-left:0" >CAREER WITH PURPOSE</h2>
-              <p style="margin-left:0">At Pure Finest Inc., building your career means more than just a job—it’s a chance
-                 to make a meaningful impact on a global scale. Join us to grow,
-                  innovate, and help shape a brighter future."</p>
-              <button style="background: #0000ff;border-radius:10px;">HUMAN POTENTIAL</button>
+        </li>
+  
+        <li class="mobile-version-5">
+          <a href="#">Careers<i class="fa fa-caret-down"></i></a>
+          <div class="dropdown-menu careers">
+            <!-- repeat content as above -->
+            <div class="dropdown-content">
+              <div>
+                <h2>CAREER WITH PURPOSE</h2>
+                <p>At Pure Finest Inc., building your career means more than just a job—it’s a chance
+                   to make a meaningful impact on a global scale. Join us to grow,
+                    innovate, and help shape a brighter future."</p>
+                <button style="background: #0000ff;border-radius:10px;">HUMAN POTENTIAL</button>
+              </div>
+              <div>
+                <h5>RECRUITMENT PROCESS</h5>
+                <ul><li>Application Pathway</li><li>Assessment</li><li>Offers</li></ul>
+              </div>
+              
             </div>
-            <div>
-              <h5 class="who">RECRUITMENT PROCESS</h5>
-              <ul>
-                <a href=""><li >Application Pathway</li></a>
-           <a href="">     <li>Assessment</li></a>
-              <a href="">  <li>Offers</li></a>
-              </ul>
-            </div>
-            
           </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-</nav>
+        </li>
+      </ul>
+    </div>
+  </nav>
 <!----Start of Bannner-->
 
   <!-- Fullscreen-width video section -->
@@ -1661,7 +1659,7 @@ left:0;
       <!-- Second Row: Copyright -->
       <div class="row text-center">
         <div class="col-xs-12 text-white">
-          <p style="font-size: 20px;" >© 2025. The Pure Finest Inc.<span><sup>&reg;</sup></span> Company. All rights reserved.</p>
+          <p style="font-size: 20px;" class="footee" >© 2025. The Pure Finest Inc.<span><sup>&reg;</sup></span> Company. All rights reserved.</p>
         </div>
       </div>
     </div>
@@ -1716,57 +1714,55 @@ left:0;
  
  /*New JavaScript*/
  
-  document.addEventListener("DOMContentLoaded", function () {
-    const dropdownTriggers = document.querySelectorAll(".nav > li");
-    const menuToggle = document.getElementById("menu-toggle");
-    const nav = document.getElementById("main-nav");
+ document.addEventListener("DOMContentLoaded", function () {
+  const dropdownTriggers = document.querySelectorAll(".nav > li");
+  const menuToggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("main-nav");
 
-    // Hamburger toggle for mobile
-    menuToggle.addEventListener("click", function (e) {
-      e.stopPropagation();
-      nav.classList.toggle("active");
-    });
-
-    // Dropdown toggle for each nav item
-    dropdownTriggers.forEach(item => {
-      const link = item.querySelector("a");
-
-      link.addEventListener("click", function (e) {
-        // Don't open link if it has a dropdown
-        const hasDropdown = item.querySelector(".dropdown-menu");
-        if (hasDropdown) {
-          e.preventDefault();
-          e.stopPropagation();
-
-          // Toggle dropdown
-          dropdownTriggers.forEach(el => {
-            if (el !== item) el.classList.remove("active");
-          });
-
-          item.classList.toggle("active");
-        }
-      });
-
-      // Close dropdown when clicking inside dropdown content
-      const dropdownMenu = item.querySelector(".dropdown-menu");
-      if (dropdownMenu) {
-        dropdownMenu.addEventListener("click", function () {
-          item.classList.remove("active");
-          nav.classList.remove("active"); // optional: auto-close nav after click on mobile
-        });
-      }
-    });
-
-
-    
-    // Close dropdowns and menu when clicking outside
-    document.addEventListener("click", function (e) {
-      if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
-        dropdownTriggers.forEach(item => item.classList.remove("active"));
-        nav.classList.remove("active");
-      }
-    });
+  // Hamburger toggle for mobile
+  menuToggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    nav.classList.toggle("active");
   });
+
+  // Dropdown toggle for each nav item
+  dropdownTriggers.forEach(item => {
+    const link = item.querySelector("a");
+
+    link.addEventListener("click", function (e) {
+      const hasDropdown = item.querySelector(".dropdown-content"); // FIXED
+      if (hasDropdown) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        // Toggle dropdown
+        dropdownTriggers.forEach(el => {
+          if (el !== item) el.classList.remove("active");
+        });
+
+        item.classList.toggle("active");
+      }
+    });
+
+    // Close dropdown when clicking inside dropdown content
+    const dropdownContent = item.querySelector(".dropdown-content"); // FIXED
+    if (dropdownContent) {
+      dropdownContent.addEventListener("click", function () {
+        item.classList.remove("active");
+        nav.classList.remove("active");
+      });
+    }
+  });
+
+  // Close dropdowns and menu when clicking outside
+  document.addEventListener("click", function (e) {
+    if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+      dropdownTriggers.forEach(item => item.classList.remove("active"));
+      nav.classList.remove("active");
+    }
+  });
+});
+
 
  
 /*For Mobile*/
