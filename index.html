@@ -284,7 +284,28 @@ z-index: 100;
     color: green;
     font-weight: 900;
   }
-
+  .social-icons {
+    display: flex;
+    gap: 10px; /* space between icons */
+  }
+  
+  .social-icon {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    color: #000; /* optional: icon color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    background-color: #f0f0f0; /* optional hover effect */
+  }
+  
 /*li:hover .dropdown-menu,
 li.active .dropdown-menu {
 display: block;
@@ -381,6 +402,21 @@ li a{
  /*font-family: 'Playfair Display', serif;*/
 font-family: 'Saira Stencil One', sans-serif;
 
+}
+.mobile-version-1 a:hover{
+background-color: #6ccb35 !important;
+}
+.mobile-version-2 a:hover{
+  background: #ffa500 !important;
+}
+.mobile-version-3 a:hover{
+  background: #c04141 !important;
+}
+.mobile-version-4 a:hover{
+  background-color: #755353 !important;
+}
+.mobile-version-5 a:hover{
+  background: #0000ff !important;
 }
 p,li,h1,h3,h2{
   font-family: 'Open Sans', sans-serif;
@@ -696,6 +732,12 @@ p,li,h1,h3,h2{
 /*.copyright{
     margin-left: auto !important;
 }*/
+/*.footer-logo img {
+  max-width: 100%;
+  height: auto;
+  width: 200px; /* Increase this as needed */
+/*}*/
+
 .stay{
   font-size: 18px !important;
   margin-left: 80px!important;
@@ -889,6 +931,12 @@ font-weight: 900;
   width: 100%;
 height: 80px; /* ⬇️ Wave height reduced from 300px to 120px */
 }
+/*Footer logo*/
+.footer-logo{
+  max-width: 100%;
+  height: auto;
+  width: 900px !important; /* Increase this as needed */
+}
 
 /*.footer {
   background-color: #254125;
@@ -907,6 +955,10 @@ height: 80px; /* ⬇️ Wave height reduced from 300px to 120px */
   max-width: 150px;
   height: auto;
 }*/
+.footee{
+  text-align:right;
+  margin-left: 350px !important;
+}
 .footer-logo{
   margin-top: 0 !important;
   max-width: 240px !important;
@@ -926,7 +978,10 @@ height: 80px; /* ⬇️ Wave height reduced from 300px to 120px */
 .dropdown-content ul li a{
   font-weight: normal;
 }
-
+.list-unstyled{
+  margin-top: 50px;
+  margin-left: 60px;
+}
 @media (max-width: 768px) {
 .mobile-version-1,.mobile-version-2,
 .mobile-version-3,.mobile-version-4,.mobile-version-5{
@@ -1169,7 +1224,7 @@ left:0;
     border-top: 10px solid #6ccb35;
     margin-left:-50px !important;
     width: 150vw !important;
-    height: 60vh;
+    height: 50vh;
     margin-top: 20px;
   }
 
@@ -1177,7 +1232,7 @@ left:0;
     border-top: 10px solid #ffa500;
     margin-left: -80px !important;
     width: 100vw !important;
-    height: 60vh;
+    height: 50vh;
     margin-top: 20px;
   }
 
@@ -1185,7 +1240,7 @@ left:0;
     border-top: 10px solid #c04141;
     margin-left: -200px !important;
     width: 100vw !important;
-    height: 60vh;
+    height: 50vh;
     margin-top: 20px;
   }
 
@@ -1193,7 +1248,7 @@ left:0;
     border-top: 10px solid #755353;
     margin-left: -350px !important;
     width: 150vw !important;
-    height: 60vh;
+    height: 50vh;
     margin-top: 20px;
   }
 
@@ -1292,8 +1347,11 @@ left:0;
     margin-top: 10px;
   }
   .footee{
-    text-align:justify;
-    margin-left: 0;
+ /*   text-align:justify;*/
+    margin:auto !important;
+  }
+  .footer-logo{
+    width:600px !important;
   }
 }
 
@@ -1358,7 +1416,7 @@ left:0;
             <!-- repeat content as above -->
             <div class="dropdown-content">
               <div>
-                <h2 style="font-weight: 900;">15+ <br>Years of Crafting Excellence</h2>
+                <h2 style="font-weight: 900;font-family: 'Saira Stencil One', sans-serif;">15+ <br>Years of Crafting Excellence</h2>
                 <p style="font-size: 20px; text-align:justify;">Since 2010, Pure Finest Inc. has been redefining food and beverage standards, making a difference with premium products
                    that inspire wellness, sustainability, and innovation. Explore our Story, Purpose, and Vision and more</p>
                 <button style="background-color: #6ccb35;border-radius:10px;text-decoration:none"><a href="who-we-are.html">LEARN MORE</a></button>
@@ -1431,7 +1489,7 @@ left:0;
                 <p class="sos-p">At Pure Finest Inc., we believe that people are our greatest asset.
                    From empowering our employees to fostering meaningful connections with partners and supporting the communities 
                   we call home, we are committed to improving lives and creating a positive impact wherever we operate.</p>
-                <button style="background-color: rgb(192, 65, 65);border-radius:10px;width:200px" class="who"><a href="people-first.html">PEOPLE FIRST</a></button>
+                <button style="background-color: #c04141;border-radius:10px;width:200px" class="who"><a href="people-first.html">PEOPLE FIRST</a></button>
               </div>
               <div>
                 <h5 style="text-decoration: underline;" class="who edim"><a href="edi.html">EDI</a></h5>
@@ -1461,11 +1519,11 @@ left:0;
             <!-- repeat content as above -->
             <div class="dropdown-content">
               <div>
-                <h2 class="stay">STAY UPDATED </h2>
+                <h2 class="stay" style="font-family: 'Saira Stencil One', sans-serif;">STAY UPDATED </h2>
                 <p class="stay-p">Discover the latest from Pure Finest Inc. — from groundbreaking brand
                    innovations to impactful 
                   sustainability initiatives. Explore how we’re shaping the future of food and beverages around the globe.</p>
-                <button style="background: rgb(117, 83, 83);border-radius:10px;">GET THE LATEST</button>
+                <button style="background: #755353;border-radius:10px;">GET THE LATEST</button>
               </div>
               <div>
                 <h5 class="stay-h">Being Read</h5>
@@ -1491,7 +1549,7 @@ left:0;
             <!-- repeat content as above -->
             <div class="dropdown-content">
               <div>
-                <h2 class="car">CAREER WITH PURPOSE</h2>
+                <h2 class="car" style="font-family: 'Saira Stencil One', sans-serif;">CAREER WITH PURPOSE</h2>
                 <p class="car-p">At Pure Finest Inc., building your career means more than just a job—it’s a chance
                    to make a meaningful impact on a global scale. Join us to grow,
                     innovate, and help shape a brighter future."</p>
@@ -1580,23 +1638,69 @@ left:0;
 <!-------Bootstrap Media-->
 <div class="container thumbnail-section">
   <div class="row">
-  <!----  <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="#" target="_blank">
-          <div class="img-container">
-            <img src="./Assets/BlogImage 2 (1).png" alt="Lights">
-          </div>
-          <img src="/Assets/newsLogo 6.png" alt="Logo" class="logo-overlay">
-          <div class="caption">
-            <p style="font-weight: 900;margin-left:0;">PureFinest set to expand into Africa’s functional beverage market</p>
-            <div class="meta-row">
-              <span class="meta-left">HEALTH</span>
-              <span class="meta-right">Oct 1st, 2024</span>
+ 
+    <div class="row">
+   
+
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="index.html" class="external-link" data-url="https://www.bevnet.com/pr/2024/09/04/pure-finest-inc-set-to-launch-a-revolutionary-3in1-taste-me-feel-me-beverage-brand-set-with-premium-ingredients">
+  
+            <div class="img-container">
+              <img src="./Assets/BlogImage 2.png" alt="Nature">
             </div>
-          </div>
-        </a>
+            <img src="/Assets/newsLogo 4.png" alt="Logo" class="logo-overlay">
+            <div class="caption">
+              <p style="font-weight: 900;margin-left:0;">Pure Finest Inc. Set to Launch: A Revolutionary 3-in-1 Taste Me! Feel Me! Beverage Brand Set with Premium Ingredients</p>
+              <div class="meta-row">
+                <span class="meta-left">HEALTH</span>
+                <span class="meta-right">Aug 29th, 2024</span>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
-    </div>-->
+  
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="index.html" class="external-link" data-url="https://www.trendhunter.com/trends/line-of-beverages">
+  
+            <div class="img-container">
+              <img src="/Assets/BlogImage 2.png" alt="Fjords">
+            </div>
+            <img src="/Assets/newsLogo 5.png" alt="Logo" class="logo-overlay">
+            <div class="caption">
+              <p style="font-weight: 900;margin-left:0;">PureFinest Inc. is Preparing to Launch a New Line of Beverages</p>
+              <div class="meta-row">
+                <span class="meta-left">HEALTH</span>
+                <span class="meta-right">Sept 11th, 2024</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="index.html" class="external-link" data-url="https://www.vanguardngr.com/2024/09/purefinest-set-to-launch-organic-vitamin-sports-and-vitality-beverages-across-africa/">
+  
+            <div class="img-container">
+              <img src="/Assets/Blog 2.jpg" alt="Fjords" class="img-3">
+            </div>
+            <img src="/Assets/newsLogo 1.png" alt="Logo" class="logo-overlay">
+            <div class="caption">
+              <p style="font-weight: 900;margin-left:0;">PureFinest® Set to Launch Organic Vitamin, Sports, and Vitality Beverages Across Africa</p>
+              <div class="meta-row">
+                <span class="meta-left">HEALTH</span>
+                <span class="meta-right">Sept 27th, 2024</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <!-- Second Row -->
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="index.html" class="external-link" data-url="https://www.brewbound.com/pr/2024/09/04/pure-finest-inc-set-to-launch-a-revolutionary-3in1-taste-me-feel-me-beverage-brand-set-with-premium-ingredients">
@@ -1633,71 +1737,28 @@ left:0;
         </a>
       </div>
     </div>
-
-    <div class="col-md-4">
+ <!----  <div class="col-md-4">
       <div class="thumbnail">
-        <a href="index.html" class="external-link" data-url="https://www.vanguardngr.com/2024/09/purefinest-set-to-launch-organic-vitamin-sports-and-vitality-beverages-across-africa/">
-
+        <a href="#" target="_blank">
           <div class="img-container">
-            <img src="/Assets/Blog 2.jpg" alt="Fjords" class="img-3">
+            <img src="./Assets/BlogImage 2 (1).png" alt="Lights">
           </div>
-          <img src="/Assets/newsLogo 1.png" alt="Logo" class="logo-overlay">
+          <img src="/Assets/newsLogo 6.png" alt="Logo" class="logo-overlay">
           <div class="caption">
-            <p style="font-weight: 900;margin-left:0;">PureFinest® Set to Launch Organic Vitamin, Sports, and Vitality Beverages Across Africa</p>
+            <p style="font-weight: 900;margin-left:0;">PureFinest set to expand into Africa’s functional beverage market</p>
             <div class="meta-row">
               <span class="meta-left">HEALTH</span>
-              <span class="meta-right">Sept 27th, 2024</span>
+              <span class="meta-right">Oct 1st, 2024</span>
             </div>
           </div>
         </a>
       </div>
-    </div>
+    </div>-->
+    
   </div>
 
-  <!-- Second Row -->
-  <div class="row">
-   
-
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="index.html" class="external-link" data-url="https://www.bevnet.com/pr/2024/09/04/pure-finest-inc-set-to-launch-a-revolutionary-3in1-taste-me-feel-me-beverage-brand-set-with-premium-ingredients">
-
-          <div class="img-container">
-            <img src="./Assets/BlogImage 2.png" alt="Nature">
-          </div>
-          <img src="/Assets/newsLogo 4.png" alt="Logo" class="logo-overlay">
-          <div class="caption">
-            <p style="font-weight: 900;margin-left:0;">Pure Finest Inc. Set to Launch: A Revolutionary 3-in-1 Taste Me! Feel Me! Beverage Brand Set with Premium Ingredients</p>
-            <div class="meta-row">
-              <span class="meta-left">HEALTH</span>
-              <span class="meta-right">Aug 29th, 2024</span>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="index.html" class="external-link" data-url="https://www.trendhunter.com/trends/line-of-beverages">
-
-          <div class="img-container">
-            <img src="/Assets/BlogImage 2.png" alt="Fjords">
-          </div>
-          <img src="/Assets/newsLogo 5.png" alt="Logo" class="logo-overlay">
-          <div class="caption">
-            <p style="font-weight: 900;margin-left:0;">PureFinest Inc. is Preparing to Launch a New Line of Beverages</p>
-            <div class="meta-row">
-              <span class="meta-left">HEALTH</span>
-              <span class="meta-right">Sept 11th, 2024</span>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
+  
+  
 
        
 <!-- Footer Section (Full width, isolated, no side effects) -->
@@ -1717,11 +1778,13 @@ left:0;
     <div class="container">
       <!-- First Row: Logo, Useful Links, Info, Select + Icons -->
       <div class="row text-white">
-        <div class="col-sm-3 text-center text-sm-left mb-3 footer-logo">
+       <div class="col-sm-3 text-center text-sm-left mb-3 footer-logo">
           <img src="/Assets/Footer logo.png" alt="Footer Logo" class="footer-logo img-responsive">
         </div>
+       <!---- <img src="/Assets/Footer logo.png" alt="Footer Logo" class="footer-logo img-responsive" style="width: 200px;">
+-->
         <div class="col-sm-3 mb-3">
-          <h2>Useful Links</h2>
+        <!-----  <h2>Useful Links</h2>-->
           <ul class="list-unstyled">
             <li><a href="#" class="text-white">Sustainability</a></li>
             <li><a href="#" class="text-white">Responsibility</a></li>
@@ -1730,7 +1793,7 @@ left:0;
           </ul>
         </div>
         <div class="col-sm-3 mb-3">
-          <h2>Information</h2>
+     <!-----     <h2>Information</h2>-->
           <ul class="list-unstyled">
             <li><a href="#" class="text-white">Cookies Setting</a></li>
             <li><a href="#" class="text-white">Imprint</a></li>
@@ -1754,21 +1817,28 @@ left:0;
             <option value="ig">Igbo</option>
             <option value="ha">Hausa</option>
           </select> <br><br>
-          <div class="social-icons">
+        <!------  <div class="social-icons">
             <i class="fab fa-tiktok fa-2x me-2"></i>
             <i class="fab fa-twitter fa-2x me-2"></i>
             <i class="fab fa-instagram fa-2x me-2"></i>
             <i class="fab fa-threads fa-2x"></i>
+          </div>-->
+          <div class="social-icons">
+            <i class="fab fa-tiktok fa-2x social-icon"></i>
+            <i class="fab fa-twitter fa-2x social-icon"></i>
+            <i class="fab fa-instagram fa-2x social-icon"></i>
+            <i class="fab fa-threads fa-2x social-icon"></i>
           </div>
+          
         </div>
       </div>
 
-      <hr style="border-color: #fff;">
+     <!----- <hr style="border-color: #fff;">-->
 
       <!-- Second Row: Copyright -->
       <div class="row text-center">
         <div class="col-xs-12 text-white">
-          <p style="font-size: 20px;" class="footee" >© 2025. The Pure Finest Inc.<span><sup>&reg;</sup></span> Company. All rights reserved.</p>
+          <p style="font-size: 20px;" class="footee" >© 2025.Pure Finest Inc.<span><sup>&reg;</sup></span></p>
         </div>
       </div>
     </div>
