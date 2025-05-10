@@ -134,6 +134,62 @@ body, html {
    }
 
 */
+.footer-logo img {
+  width: 200px;
+  height: auto;
+  margin-left: -10px;
+}
+
+/*.social-icons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  color: #000;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footee {
+  font-size: 20px;
+  
+}
+
+*/
+.social-icons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  color: #000;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footee {
+  font-size: 20px;
+}
+.form-control{
+  margin-left: 15px !important;
+}
 body {
  /* font-family: 'Roboto', sans-serif;*/
   font-family: 'Open Sans', sans-serif;
@@ -280,32 +336,7 @@ padding: 20px;
 box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 z-index: 100;
 }
-.follow-us{
-    color: green;
-    font-weight: 900;
-  }
-  .social-icons {
-    display: flex;
-    gap: 10px; /* space between icons */
-  }
-  
-  .social-icon {
-    background-color: white;
-    border-radius: 50%;
-    padding: 10px;
-    color: #000; /* optional: icon color */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .social-icon:hover {
-    background-color: #f0f0f0; /* optional hover effect */
-  }
-  
+
 /*li:hover .dropdown-menu,
 li.active .dropdown-menu {
 display: block;
@@ -932,12 +963,12 @@ font-weight: 900;
 height: 80px; /* ⬇️ Wave height reduced from 300px to 120px */
 }
 /*Footer logo*/
-.footer-logo{
+/*.footer-logo{
   max-width: 100%;
   height: auto;
   width: 900px !important; /* Increase this as needed */
-}
-
+/*}
+*/
 /*.footer {
   background-color: #254125;
   color: white;*/
@@ -955,14 +986,14 @@ height: 80px; /* ⬇️ Wave height reduced from 300px to 120px */
   max-width: 150px;
   height: auto;
 }*/
-.footee{
+/*.footee{
   text-align:right;
   margin-left: 350px !important;
-}
-.footer-logo{
+}*/
+/*.footer-logo{
   margin-top: 0 !important;
   max-width: 240px !important;
-}
+}*/
 .language-selector {
   width: 200px;
   background-color: #29226b;
@@ -1350,9 +1381,22 @@ left:0;
  /*   text-align:justify;*/
     margin:auto !important;
   }
-  .footer-logo{
+ /* .footer-logo{
     width:600px !important;
+  }*/
+  .form-control{
+margin-left: 85px !important;
   }
+  .social-icons{
+    margin: auto;
+  }
+  
+  .footer-logo img {
+    max-width: 200px;
+    height: auto;
+    margin-left: 150px !important;
+  }
+  
 }
 
   </style>
@@ -1774,75 +1818,72 @@ left:0;
   </div>
 
   <!-- Footer Content -->
-  <footer class="footer" style="background-color:#254125 ;">
-    <div class="container">
-      <!-- First Row: Logo, Useful Links, Info, Select + Icons -->
-      <div class="row text-white">
-       <div class="col-sm-3 text-center text-sm-left mb-3 footer-logo">
-          <img src="/Assets/Footer logo.png" alt="Footer Logo" class="footer-logo img-responsive">
-        </div>
-       <!---- <img src="/Assets/Footer logo.png" alt="Footer Logo" class="footer-logo img-responsive" style="width: 200px;">
--->
-        <div class="col-sm-3 mb-3">
-        <!-----  <h2>Useful Links</h2>-->
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Sustainability</a></li>
-            <li><a href="#" class="text-white">Responsibility</a></li>
-            <li><a href="#" class="text-white">Terms Of Use</a></li>
-            <li><a href="#" class="text-white">Labels Protection</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-3 mb-3">
-     <!-----     <h2>Information</h2>-->
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Cookies Setting</a></li>
-            <li><a href="#" class="text-white">Imprint</a></li>
-            <li><a href="#" class="text-white">Fraud Warning</a></li>
-            <li><a href="#" class="text-white">Privacy Policy</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-3  text-center text-sm-left">
-         <!----- <h4>Language</h4>-->
-          <select class="form-control language-selector">
-            <option value="en">English</option>
-            <option value="fr">French</option>
-            <option value="es">Spanish</option>
-            <option value="dt">Dutch</option>
-            <option value="ar">Arabic</option>
-            <option value="ch">Chinese</option>
-            <option value="pt">Portuguese</option>
-            <option value="rs">Russian</option>
-            <option value="tr">Turkish</option>
-            <option value="yr">Yoruba</option>
-            <option value="ig">Igbo</option>
-            <option value="ha">Hausa</option>
-          </select> <br><br>
-        <!------  <div class="social-icons">
-            <i class="fab fa-tiktok fa-2x me-2"></i>
-            <i class="fab fa-twitter fa-2x me-2"></i>
-            <i class="fab fa-instagram fa-2x me-2"></i>
-            <i class="fab fa-threads fa-2x"></i>
-          </div>-->
-          <div class="social-icons">
+
+ <footer class="footer" style="background-color:#254125;">
+  <div class="container">
+    <div class="row text-white align-items-center">
+      
+      <!-- Logo -->
+      <div class="col-sm-3 text-center text-sm-left mb-3 footer-logo">
+       <!------ <img src="/Assets/Footer logo.png" alt="Footer Logo" class="img-responsive" style="width: 500px; margin-left: -10px;">-->
+        <img src="/Assets/Footer logo.png" alt="Footer Logo" class="footer-logo img-responsive" style="max-width: 270px; height: auto;">
+
+      </div>
+
+      <!-- Useful Links -->
+      <div class="col-sm-3 mb-3 text-center text-sm-left">
+        <ul class="list-unstyled mb-0">
+          <li><a href="#" class="text-white">Sustainability</a></li>
+          <li><a href="#" class="text-white">Responsibility</a></li>
+          <li><a href="#" class="text-white">Terms Of Use</a></li>
+          <li><a href="#" class="text-white">Labels Protection</a></li>
+        </ul>
+      </div>
+
+      <!-- Info Links -->
+      <div class="col-sm-3 mb-3 text-center text-sm-left">
+        <ul class="list-unstyled mb-0">
+          <li><a href="#" class="text-white">Cookies Setting</a></li>
+          <li><a href="#" class="text-white">Imprint</a></li>
+          <li><a href="#" class="text-white">Fraud Warning</a></li>
+          <li><a href="#" class="text-white">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Language, Icons, Copyright -->
+      <div class="col-sm-3 mb-3 d-flex flex-column align-items-start">
+        <select class="form-control language-selector mb-3 w-100">
+          <option value="en">English</option>
+          <option value="fr">French</option>
+          <option value="es">Spanish</option>
+          <option value="dt">Dutch</option>
+          <option value="ar">Arabic</option>
+          <option value="ch">Chinese</option>
+          <option value="pt">Portuguese</option>
+          <option value="rs">Russian</option>
+          <option value="tr">Turkish</option>
+          <option value="yr">Yoruba</option>
+          <option value="ig">Igbo</option>
+          <option value="ha">Hausa</option>
+        </select>
+
+        <!-- Icons + Copyright wrapper -->
+        <div class="d-flex flex-column">
+          <div class="social-icons d-flex gap-2 mb-2">
             <i class="fab fa-tiktok fa-2x social-icon"></i>
-            <i class="fab fa-twitter fa-2x social-icon"></i>
+            <i class="fab fa-x-twitter fa-2x social-icon"></i>
             <i class="fab fa-instagram fa-2x social-icon"></i>
             <i class="fab fa-threads fa-2x social-icon"></i>
           </div>
-          
+          <p class="footee text-white mb-0" style="margin-left: 10px;margin-top:10px"> <span>&copy;</span><span style="word-spacing: 10px;">2025 </span> Pure Finest Inc.<sup>&reg;</sup></p>
         </div>
       </div>
 
-     <!----- <hr style="border-color: #fff;">-->
-
-      <!-- Second Row: Copyright -->
-      <div class="row text-center">
-        <div class="col-xs-12 text-white">
-          <p style="font-size: 20px;" class="footee" >© 2025.Pure Finest Inc.<span><sup>&reg;</sup></span></p>
-        </div>
-      </div>
     </div>
-  </footer>
+  </div>
+</footer>
+
+  
 </div>
 
 
