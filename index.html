@@ -168,7 +168,7 @@ body, html {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  margin-left: 10px;
+  margin-left: 50px;
   margin-top: 10px;
 }
 
@@ -568,49 +568,25 @@ p,li,h1,h3,h2{
 .meta-right {
   display: inline-block;
 }
-/*.company{
-  border-top: 10px solid #6ccb35;
-  margin-left: 0 !important;
-  width:100vw !important;
-  height: 60vh;
-  margin-top: 20px;
-  
-}
-.labels{
-  border-top: 10px solid #ffa500;
-  margin-left: -80px !important;
-  width:100vw !important;
-  height: 60vh;
-  margin-top: 20px;
-  
-}
-.social{
-  border-top: 10px solid #c04141;
-  margin-left: -200px !important;
-  width:100vw !important;
-  height: 50vh;
-  margin-top: 20px;
-  
-}
-.media-center{
-  border-top: 10px solid #755353;
-  margin-left: -300px !important;
-  width:100vw !important;
-  height: 70vh;
-  margin-top: 20px;
-  
-}
-.careers{
-  border-top: 10px solid #0000ff;
-  margin-left: -500px !important;
-  width:100vw !important;
-  height: 50vh;
-  margin-top: 20px;
-  
-}*/
+
 .company h2,p,button{
   margin-left: 180px;
 
+}
+.com{
+  font-weight: 900;
+font-size: 18px;
+margin-left: 200px;
+
+}
+.pfi{
+font-weight: 900;
+font-size: 18px;
+margin-left: 0;
+}
+.pfi-li{
+font-size: 18px;
+margin-left: 0;
 }
 .car{
 font-weight: 900;
@@ -783,7 +759,7 @@ height: 80px; /* ⬇️ Wave height reduced from 300px to 120px */
     height: auto;
     margin-left:-10px !important;*/
     position: relative;
-    left: -100px !important;
+    left: -120px !important;
   }
 .language-selector {
   width: 200px;
@@ -1046,7 +1022,7 @@ left:0;
     border-top: 10px solid #6ccb35;
     margin-left:-50px !important;
     width: 150vw !important;
-    height: 50vh;
+    height: 50vh !important;
     margin-top: 20px;
   }
 
@@ -1054,7 +1030,7 @@ left:0;
     border-top: 10px solid #ffa500;
     margin-left: -80px !important;
     width: 100vw !important;
-    height: 50vh;
+    height: 50vh !important;
     margin-top: 20px;
   }
 
@@ -1062,7 +1038,7 @@ left:0;
     border-top: 10px solid #c04141;
     margin-left: -200px !important;
     width: 100vw !important;
-    height: 50vh;
+    height: 50vh !important;
     margin-top: 20px;
   }
 
@@ -1070,7 +1046,7 @@ left:0;
     border-top: 10px solid #755353;
     margin-left: -350px !important;
     width: 150vw !important;
-    height: 50vh;
+    height: 50vh !important;
     margin-top: 20px;
   }
 
@@ -1078,7 +1054,7 @@ left:0;
     border-top: 10px solid #0000ff;
     margin-left: -600px !important;
     width: 130vw !important;
-    height: 50vh;
+    height: 50vh !important;
     margin-top: 20px;
   }
 }
@@ -1126,7 +1102,7 @@ left:0;
   .social,
   .media-center,
   .careers {
-    width: 100% !important;
+    width: 100vw !important; /*To be taken seriously 100%*/
     margin-left: 0 !important;
     margin-top: 20px;
     padding: 15px;
@@ -1138,6 +1114,53 @@ left:0;
   .social     { border-top: 10px solid #c04141; }
   .media-center { border-top: 10px solid #755353; }
   .careers    { border-top: 10px solid #0000ff; }
+}
+@media screen and (max-width:991px) {
+   
+  .labels
+   {
+    width: 100vw !important; /*To be taken seriously 100%*/
+    margin-left: -150px !important;
+    margin-top: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+ 
+  .labels     { border-top: 10px solid #ffa500; }
+   .social
+   {
+    width: 100vw !important; /*To be taken seriously 100%*/
+    margin-left: -250px !important;
+    margin-top: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+ 
+  .social     { border-top: 10px solid #c04141 ; }
+  .media-center
+   {
+    width: 100vw !important; /*To be taken seriously 100%*/
+    margin-left: -350px !important;
+    margin-top: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+ 
+  .media-center     { border-top: 10px solid #755353; }
+   .careers
+   {
+    width: 100vw !important; /*To be taken seriously 100%*/
+    margin-left: -450px !important;
+    margin-top: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+ 
+  .careers     { border-top: 10px solid #0000ff; }
 }
 @media screen and (max-width: 991px) {
   .footer .row {
@@ -1253,8 +1276,8 @@ margin-left: 85px !important;
             <!-- repeat content as above -->
             <div class="dropdown-content">
               <div>
-                <h2 style="font-weight: 900;font-family: 'Saira Stencil One', sans-serif;">15+ <br>Years of Crafting Excellence</h2>
-                <p style="font-size: 20px; text-align:justify;">Since 2010, Pure Finest Inc. has been redefining food and beverage standards, making a difference with premium products
+                <h2 style="font-weight: 900;font-family: 'Saira Stencil One', sans-serif;" class="com">15+ <br>Years of Crafting Excellence</h2>
+                <p style="font-size: 20px; text-align:justify;" class="com-p">Since 2010, Pure Finest Inc. has been redefining food and beverage standards, making a difference with premium products
                    that inspire wellness, sustainability, and innovation. Explore our Story, Purpose, and Vision and more</p>
                 <button style="background-color: #6ccb35;border-radius:10px;text-decoration:none"><a href="who-we-are.html">LEARN MORE</a></button>
               </div>
@@ -1625,7 +1648,7 @@ margin-left: 85px !important;
 
       <!-- Useful Links -->
       <div class="col-sm-3 mb-3 text-center text-sm-left">
-        <ul class="list-unstyled mb-0">
+        <ul class="list-unstyled mb-0" style="text-align:left !important;">
           <li><a href="#" class="text-white">Sustainability</a></li>
           <li><a href="#" class="text-white">Responsibility</a></li>
           <li><a href="#" class="text-white">Terms Of Use</a></li>
@@ -1635,7 +1658,7 @@ margin-left: 85px !important;
 
       <!-- Info Links -->
       <div class="col-sm-3 mb-3 text-center text-sm-left">
-        <ul class="list-unstyled mb-0">
+        <ul class="list-unstyled mb-0" style="text-align:left;">
           <li><a href="#" class="text-white">Cookies Setting</a></li>
           <li><a href="#" class="text-white">Imprint</a></li>
           <li><a href="#" class="text-white">Fraud Warning</a></li>
