@@ -576,16 +576,27 @@ p,li,h1,h3,h2{
 .com{
   font-weight: 900;
 font-size: 18px;
-margin-left: 200px;
+margin-left: 300px !important;
+width: 60%;
 
+}
+.com-p{
+  margin-left: 300px !important;
+width: 60%;
+}
+.com-butt{
+    margin-left: 300px !important;
+width: 60%;
 }
 .pfi{
 font-weight: 900;
 font-size: 18px;
-margin-left: 0;
+margin-left: -550px !important;
 }
 .pfi-li{
 font-size: 18px;
+margin-left: -550px !important;
+
 margin-left: 0;
 }
 .car{
@@ -624,38 +635,90 @@ font-weight: 900;
 }
 .lab{
   font-weight: 900;
+   margin-left: 50px;
 }
 .lab-p{
-  margin-left: 0;
+  width: 500px;
+  margin-left: 50px;
   font-size: 18px;
   text-align: justify;
+}
+.lab-hyd{
+  margin-left: -150px;
+}
+.lab-li{
+    margin-left: -150px;
+}
+.lab-juice{
+ margin-left: -750px;
+}
+.lab-li-juice{
+   margin-left: -750px;
+}
+.lab-snacks{
+  margin-left: -1380px;
+}
+.lab-li-snacks{
+ margin-left: -1380px;
+}
+.lab-al{
+ margin-left: -2050px;
+}
+.lab-li-al{
+  margin-left: -2050px;
 }
 .stay{
 margin-left: 50px;
+  font-size: 18px;
 }
 .stay-p{
 margin-left: 50px;
+  font-size: 18px;
+}
+.stay-h{
+margin-left: 50px;
+  font-size: 18px;
+}
+.stay-li-h{
+margin-left: 50px;
+  font-size: 18px;
 }
 .stay-h2{
-margin-left: -300px;
+margin-left: -100px;
+  font-size: 18px;
 }
 .stay-li-h2{
-margin-left:-300px;
+margin-left:-100px;
+  font-size: 18px;
 }
 .stay-h3{
-margin-left: -400px;
+margin-left: -200px;
+  font-size: 18px;
 }
 .stay-li-h3{
-margin-left:-400px;
+margin-left:-200px;
+  font-size: 18px;
 }
 .sos-h{
-margin-left: 0;
+  width: 300px;
+  margin-left: 50px;
+
   font-size: 18px;
 }
 .sos-p{
-   margin-left: 0;
+    width: 300px;
+   margin-left: 50px;
   font-size: 18px;
   text-align: justify;
+}
+.edim-li{
+  font-size: 18px;
+}
+.edim-sponsor{
+   font-size: 18px;
+}
+.pff-li{
+   font-size: 18px;
 }
 .external-link{
   margin-left: 0;
@@ -1015,70 +1078,132 @@ left:0;
   margin-top: 20px;
   
 }*/
-
-/* ---------------- Desktop Styles (≥ 992px) ---------------- */
-@media screen and (min-width: 992px) {
+/* ========== Desktop Styles (≥ 1200px) ========== */
+@media screen and (min-width: 1200px) {
   .company {
-    border-top: 10px solid #6ccb35;
-    margin-left:-50px !important;
-    width: 150vw !important;
-    height: 50vh !important;
-    margin-top: 20px;
+    width: 200vw;
+    height: 50vh;
+    margin-left: -50px;
+    padding: 15px;
+    box-sizing: border-box;
   }
-
-  .labels {
-    border-top: 10px solid #ffa500;
-    margin-left: -80px !important;
-    width: 100vw !important;
-    height: 50vh !important;
-    margin-top: 20px;
+.labels {
+    width: 300vw;
+    height: 50vh;
+    margin-left: -90px;
+    padding: 15px;
+    box-sizing: border-box;
   }
-
   .social {
-    border-top: 10px solid #c04141;
-    margin-left: -200px !important;
-    width: 100vw !important;
-    height: 50vh !important;
-    margin-top: 20px;
+    width: 100vw;
+    height: 65vh;
+    margin-left: -200px;
+    padding: 15px;
+    box-sizing: border-box;
   }
-
   .media-center {
-    border-top: 10px solid #755353;
-    margin-left: -350px !important;
-    width: 150vw !important;
-    height: 50vh !important;
-    margin-top: 20px;
+    width: 120vw;
+    height: 50vh;
+    margin-left: -350px;
+    padding: 15px;
+    box-sizing: border-box;
   }
-
   .careers {
-    border-top: 10px solid #0000ff;
-    margin-left: -600px !important;
-    width: 130vw !important;
-    height: 50vh !important;
-    margin-top: 20px;
+    width: 100vw;
+    height: 50vh;
+    margin-left: -510px;
+    padding: 15px;
+    box-sizing: border-box;
   }
+  .company       { border-top: 10px solid #6ccb35; }
+  .labels        { border-top: 10px solid #ffa500; }
+  .social        { border-top: 10px solid #c04141; }
+  .media-center  { border-top: 10px solid #755353; }
+  .careers       { border-top: 10px solid #0000ff; }
 }
 
-/* ---------------- Mobile Styles (< 992px) ---------------- */
-@media screen and (max-width: 992px) {
-  /* General mobile dropdown container */
+/* ========== Laptop Styles (992px – 1199px) ========== */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .company {
+    width: 100vw;
+    height: 65vh;
+    margin: 0 auto 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+ .labels {
+    width: 100vw;
+    height: 65vh;
+    margin: 0 auto 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+   .social {
+    width: 100vw;
+    height: 65vh;
+    margin: 0 auto 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+   .media-center {
+    width: 100vw;
+    height: 65vh;
+    margin: 0 auto 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+   .careers {
+    width: 100vw;
+    height: 65vh;
+    margin: 0 auto 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  .company       { border-top: 10px solid #6ccb35; }
+  .labels        { border-top: 10px solid #ffa500; }
+  .social        { border-top: 10px solid #c04141; }
+  .media-center  { border-top: 10px solid #755353; }
+  .careers       { border-top: 10px solid #0000ff; }
+}
+
+/* ========== Tablet & Mobile Styles (< 992px) ========== */
+@media screen and (max-width: 991px) {
   .dropdown-menu {
-    position: static !important;
-    width: 100% !important;
+    position: static;
+    width: 100%;
     padding: 0;
     margin: 0;
     background: #fff;
   }
 
   .dropdown-content {
-    display: block !important;
+    display: block;
     padding: 10px 15px;
     margin: 0;
+    width: 90%;
   }
+.lab,.lab-p{
+  
+   width: 90%;
+}
+.com{
+  font-weight: 900;
+font-size: 18px;
+margin-left: 0 !important;
+width: 60%;
 
+}
+.com-p{
+  margin-left: 0 !important;
+width: 60%;
+}
+.com-butt{
+    margin-left: 0 !important;
+width: 60%;
+}
   .dropdown-content div {
-    width: 100% !important;
-    margin: 10px 0 0 0 !important;
+    width: 100%;
+    margin-top: 10px;
     padding: 10px 0;
     text-align: left;
     box-sizing: border-box;
@@ -1091,202 +1216,33 @@ left:0;
   .dropdown-content li,
   .dropdown-content button,
   .dropdown-content a {
-    margin-left: 0 !important;
-    padding-left: 0 !important;
-    text-align: left !important;
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
   }
 
-  /* Section-specific styles */
   .company,
   .labels,
   .social,
   .media-center,
   .careers {
-    width: 100vw !important; /*To be taken seriously 100%*/
-    margin-left: 0 !important;
-    margin-top: 20px;
+    width: 100vw;
+    height: auto;
+    margin: 20px 0 0 0;
     padding: 15px;
     box-sizing: border-box;
   }
 
-  .company    { border-top: 10px solid #6ccb35; }
-  .labels     { border-top: 10px solid #ffa500; }
-  .social     { border-top: 10px solid #c04141; }
-  .media-center { border-top: 10px solid #755353; }
-  .careers    { border-top: 10px solid #0000ff; }
-}
-/*1280*/
-@media screen and (max-width:1280px) {
-  .pfi{
-font-weight: 900;
-font-size: 18px;
-margin-left: -100px !important;
-}
-.pfi-li{
-font-size: 18px;
-margin-left: -100px !important;
-}
-.stay-h2{
+  .company       { border-top: 10px solid #6ccb35; }
+  .labels        { border-top: 10px solid #ffa500; }
+  .social        { border-top: 10px solid #c04141; }
+  .media-center  { border-top: 10px solid #755353; }
+  .careers       { border-top: 10px solid #0000ff; }
 
-}
-.stay-li-h2{
-
-}
-.stay-h3{
-
-}
-.stay-li-h3{
-
-}
-   .company
-   {
-    width: 150vw !important; /*To be taken seriously 100%*/
-    height: 40vh !important;
-    margin-left: 0 !important;
-    margin-top:10px;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
- 
-  .company     { border-top: 10px solid #6ccb35; }
-  .labels
-   {
-    width: 100vw !important; /*To be taken seriously 100%*/
-     height: 40vh !important;
-    margin-left: 0 !important;
-    margin-top: 0;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
- 
-  .labels     { border-top: 10px solid #ffa500; }
-   .social
-   {
-    width: 100vw !important; /*To be taken seriously 100%*/
-    margin-left: -170px !important;
-    height: 40vh !important;
-    margin-top: 0;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
- 
-  .social     { border-top: 10px solid #c04141 ; }
-  .media-center
-   {
-    width: 150vw !important; /*To be taken seriously 100%*/
-    margin-left: -280px !important;
-    height: 40vh !important;
-    margin-top: 0;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
- 
-  .media-center     { border-top: 10px solid #755353; }
-   .careers
-   {
-    width: 120vw !important; /*To be taken seriously 100%*/
-    height: 40vh !important;
-    margin-left: -500px !important;
-    margin-top: 0;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
- 
-  .careers     { border-top: 10px solid #0000ff; }
-}
-/*1024*/
-@media screen and (max-width:1024px) {
-  .pfi{
-font-weight: 900;
-font-size: 18px;
-margin-left: -100px !important;
-}
-.pfi-li{
-font-size: 18px;
-margin-left: -100px !important;
-}
-.stay-h2{
-
-}
-.stay-li-h2{
-
-}
-.stay-h3{
-
-}
-.stay-li-h3{
-
-}
-   .company
-   {
-    width: 150vw !important; /*To be taken seriously 100%*/
-    height: 80vh !important;
-    margin-left: 500px !important;
-    margin-top:10px;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
- 
-  .company     { border-top: 10px solid #6ccb35; }
-  .labels
-   {
-    width: 100vw !important; /*To be taken seriously 100%*/
-     height: 80vh !important;
-    margin-left: 400px !important;
-    margin-top: 0;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
- 
-  .labels     { border-top: 10px solid #ffa500; }
-   .social
-   {
-    width: 100vw !important; /*To be taken seriously 100%*/
-    margin-left: 300px !important;
-    height: 80vh !important;
-    margin-top: 0;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
- 
-  .social     { border-top: 10px solid #c04141 ; }
-  .media-center
-   {
-    width: 150vw !important; /*To be taken seriously 100%*/
-    margin-left: 150px !important;
-    height: 80vh !important;
-    margin-top: 0;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
- 
-  .media-center     { border-top: 10px solid #755353; }
-   .careers
-   {
-    width: 100vw !important; /*To be taken seriously 100%*/
-    height: 80vh !important;
-    margin-left: -10px !important;
-    margin-top: 0;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
- 
-  .careers     { border-top: 10px solid #0000ff; }
-}
-@media screen and (max-width: 991px) {
+  /* Footer Adjustments */
   .footer .row {
-    text-align: center !important;
-    justify-content: center !important;
+    text-align: center;
+    justify-content: center;
   }
 
   .footer .col-sm-3 {
@@ -1312,154 +1268,18 @@ margin-left: -100px !important;
   .footer .social-icons {
     margin-top: 10px;
   }
-/*  .footee{
-  text-align:justify;
-    margin:auto !important;
-  }*/
- /* .footer-logo{
-    width:600px !important;
-  }*/
-  .form-control{
-margin-left: 85px !important;
+
+  .form-control {
+    margin-left: 85px;
   }
-  .social-icons{
-    margin: auto;
-  }
-  
+
   .footer-logo img {
     max-width: 200px;
     height: auto;
-   /* margin-left: 100px !important;*/
-     position: relative;
-    left: 0 !important;
+    left: 0;
   }
-  
 }
-/*853*/
-@media screen and (max-width:853px) {
-    .company
-   {
-    width: 300vw!important;
-    height: 70vh !important;
-    margin-left: 0 !important;
-    margin-top: 20px;
-    padding: 15px;
-    box-sizing: border-box;
-  }
 
- 
-  .company     { border-top: 10px solid #6ccb35; }
-  .labels
-   {
-    width: 100% !important; 
-    height: 70% !important;
-    margin-left: 0 !important;
-    margin-top: 20px;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
- 
-  .labels     { border-top: 10px solid #ffa500; }
-   .social
-   {
-    width: 100% !important; 
-      height: 70% !important;
-    margin-left: 0 !important;
-    margin-top: 20px;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
- 
-  .social     { border-top: 10px solid #c04141 ; }
-  .media-center
-   {
-    width: 100% !important; 
-      height: 70% !important;
-    margin-left: 0 !important;
-    margin-top: 20px;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
- 
-  .media-center     { border-top: 10px solid #755353; }
-   .careers
-   {
-    width: 100%!important; 
-      height: 70% !important;
-    margin-left: 0 !important;
-    margin-top: 20px;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
- 
-  .careers     { border-top: 10px solid #0000ff; }
-}
-@media screen and (max-width:853px) {
-    .company
-   {
-    width: 100%!important;
-    height: 80% !important;
-    margin-left: 0 !important;
-    margin-top: 20px;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
- 
-  .company     { border-top: 10px solid #6ccb35; }
-  .labels
-   {
-    width: 100% !important; 
-    height: 70% !important;
-    margin-left: 0 !important;
-    margin-top: 20px;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
- 
-  .labels     { border-top: 10px solid #ffa500; }
-   .social
-   {
-    width: 100% !important; 
-      height: 70% !important;
-    margin-left: 0 !important;
-    margin-top: 20px;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
- 
-  .social     { border-top: 10px solid #c04141 ; }
-  .media-center
-   {
-    width: 100% !important; 
-      height: 70% !important;
-    margin-left: 0 !important;
-    margin-top: 20px;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
- 
-  .media-center     { border-top: 10px solid #755353; }
-   .careers
-   {
-    width: 100%!important; 
-      height: 70% !important;
-    margin-left: 0 !important;
-    margin-top: 20px;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
- 
-  .careers     { border-top: 10px solid #0000ff; }
-}
   </style>
   
 </head>
@@ -1524,7 +1344,7 @@ margin-left: 85px !important;
                 <h2 style="font-weight: 900;font-family: 'Saira Stencil One', sans-serif;" class="com">15+ <br>Years of Crafting Excellence</h2>
                 <p style="font-size: 20px; text-align:justify;" class="com-p">Since 2010, Pure Finest Inc. has been redefining food and beverage standards, making a difference with premium products
                    that inspire wellness, sustainability, and innovation. Explore our Story, Purpose, and Vision and more</p>
-                <button style="background-color: #6ccb35;border-radius:10px;text-decoration:none"><a href="who-we-are.html">LEARN MORE</a></button>
+                <button style="background-color: #6ccb35;border-radius:10px;text-decoration:none" class="com-butt"><a href="who-we-are.html">LEARN MORE</a></button>
               </div>
               <div>
                 <h5 class="who are"><a href="who-we-are.html">Who We Are</a></h5>
@@ -1564,20 +1384,20 @@ margin-left: 85px !important;
               </div>
               <div>
                 
-                <h5 style="text-decoration: underline;" class="who"><a href="brands.html">Hydration & Vitality</a></h5>
+                <h5 style="text-decoration: underline;" class="who lab-hyd"><a href="brands.html">Hydration & Vitality</a></h5>
                 <ul class="lab-li"><li class="who"><a href="finest.html">PureFinest®</a></li><li class="who"><a href="finest.html">Elysium Alps®</a></li><li><a href="finest.html">AlpineGlow®</a></li></ul>
               </div>
               <div>
-                <h5 style="text-decoration: underline;" class="who"><a href="brands.html">Juice & Dairy</a></h5>
-                <ul><li class="who"><a href="finest.html">PureLife</a></li></ul>
+                <h5 style="text-decoration: underline;" class="who lab-juice"><a href="brands.html">Juice & Dairy</a></h5>
+                <ul class="lab-li-juice"><li class="who"><a href="finest.html">PureLife</a></li></ul>
               </div>
               <div>
-                <h5 class="who"><a href="brands.html">Snacks</a></h5>
-                <ul><li class="who"><a href="finest.html">PureLife</a></li><li class="who"><a href="finest.html">Taste Me! - Feel Me!®</a></li></ul>
+                <h5 class="who lab-snacks"><a href="brands.html">Snacks</a></h5>
+                <ul><li class="who lab-li-snacks"><a href="finest.html">PureLife</a></li><li class="who"><a href="finest.html">Taste Me! - Feel Me!®</a></li></ul>
               </div>
               <div>
-                <h5 class="who"><a href="brands.html">Alcohol</a></h5>
-                <ul><li class="who"><a href="finest.html">Gin</a></li><li class="who"><a href="finest.html">Vodka</a></li><li><a href="finest.html">Wine</a></li></ul>
+                <h5 class="who lab-al"><a href="brands.html">Alcohol</a></h5>
+                <ul class="who lab-li-al"><li ><a href="finest.html">Gin</a></li><li class="who"><a href="finest.html">Vodka</a></li><li><a href="finest.html">Wine</a></li></ul>
   
               </div>
             </div>
