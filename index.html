@@ -173,6 +173,21 @@ body, html {
   text-decoration: none;
 }
 
+.facebook-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px; /* Adjust as needed */
+    height: 33px;
+    background-color: white;
+    border-radius: 50%; /* Circle */
+    border: 1px solid #ccc; /* Optional */
+  }
+
+  .facebook-icon i {
+    color: black;
+    font-size: 20px;
+  }
 .social-icon {
   background-color: white;
   border-radius: 50%;
@@ -1151,7 +1166,7 @@ left:0;
 }
 
 /* ========== Laptop Styles (992px – 1500px) ========== */
-@media screen and (min-width: 992px) and (max-width: 2000px) {
+@media screen and (min-width: 992px) and (max-width: 4000px) {
   .company {
     width: 200vw !important;
     height: 65vh;
@@ -2036,7 +2051,7 @@ width: 60%;
             <a href="https://x.com/i/flow/login?redirect_after_login=%2FPurefinestdrink"><i class="fab fa-x-twitter fa-2x social-icon"></i></a>
            <a href="https://www.instagram.com/purefinestofficial?igsh=dTV1N2p1Z2libnI3"> <i class="fab fa-instagram fa-2x social-icon"></i></a>
          <a href="https://www.threads.net/@purefinestofficial">   <i class="fab fa-threads fa-2x social-icon"></i></a>
-         <a href="https://www.facebook.com/share/1KMkUBojpm/"><i class="fab fa-facebook fa-2x social-icon"></i></a>
+      <a href="https://www.facebook.com/share/1KMkUBojpm/">   <span class="facebook-icon"><i class="fab fa-facebook-f"></i></span></a>
           </div>
           
         </div>
@@ -2111,29 +2126,27 @@ width: 60%;
     nav.classList.toggle("active");
   });
 
-  // Dropdown toggle for each nav item
+  // Dropdown toggle using mouseover instead of click
   dropdownTriggers.forEach(item => {
-    const link = item.querySelector("a");
+    const hasDropdown = item.querySelector(".dropdown-content");
 
-    link.addEventListener("click", function (e) {
-      const hasDropdown = item.querySelector(".dropdown-content"); // FIXED
-      if (hasDropdown) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        // Toggle dropdown
+    if (hasDropdown) {
+      item.addEventListener("mouseenter", function () {
+        // Remove active class from all other items
         dropdownTriggers.forEach(el => {
           if (el !== item) el.classList.remove("active");
         });
 
-        item.classList.toggle("active");
-      }
-    });
+        // Add active class to current item
+        item.classList.add("active");
+      });
 
-    // Close dropdown when clicking inside dropdown content
-    const dropdownContent = item.querySelector(".dropdown-content"); // FIXED
-    if (dropdownContent) {
-      dropdownContent.addEventListener("click", function () {
+      item.addEventListener("mouseleave", function () {
+        item.classList.remove("active");
+      });
+
+      // Optional: clicking inside dropdown closes it (e.g. on mobile)
+      hasDropdown.addEventListener("click", function () {
         item.classList.remove("active");
         nav.classList.remove("active");
       });
