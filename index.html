@@ -591,11 +591,12 @@ width: 60%;
 .pfi{
 font-weight: 900;
 font-size: 18px;
-margin-left: -550px !important;
+margin-left: -150px !important;
+/*margin-left: -550px !important;*/
 }
 .pfi-li{
 font-size: 18px;
-margin-left: -550px !important;
+margin-left: -150px !important;
 
 margin-left: 0;
 }
@@ -605,6 +606,7 @@ font-size: 18px;
 margin-left: 200px;
 }
 .car-p{
+  width: 500px;
   font-size: 18px;
   margin-left: -5px;
   margin-left: 200px;
@@ -612,11 +614,12 @@ margin-left: 200px;
 .car-h{
   font-weight: 900;
   font-size: 18px;
-  margin-left: 100px;
+  margin-left: -180px !important;
 }
 .car-li{
   font-size: 18px;
   margin-left: 100px;
+    margin-left: -180px !important;
 }
 .are{
 margin-left: 100px;
@@ -644,22 +647,22 @@ font-weight: 900;
   text-align: justify;
 }
 .lab-hyd{
-  margin-left: -150px;
+  margin-left: 80px;
 }
 .lab-li{
-    margin-left: -150px;
+    margin-left: 80px;
 }
 .lab-juice{
- margin-left: -750px;
+ margin-left: 0 !important;
 }
 .lab-li-juice{
-   margin-left: -750px;
+  margin-left: 0 !important; 
 }
 .lab-snacks{
-  margin-left: -1380px;
+  margin-left: -170px;
 }
 .lab-li-snacks{
- margin-left: -1380px;
+ margin-left: -170px;
 }
 .lab-al{
  margin-left: -2050px;
@@ -714,14 +717,32 @@ margin-left:-200px;
   font-size: 18px;
   text-align: justify;
 }
+.edim{
+  margin-left: 0 !important;
+}
+
 .edim-li{
   font-size: 18px;
 }
+.edim-human{
+margin-left: -250px !important;
+ font-size: 18px;
+}
+.edim-li-human{
+margin-left: -250px !important;
+ font-size: 18px;
+}
 .edim-sponsor{
    font-size: 18px;
+   margin-left: -450px !important;
+}
+.pff{
+   font-size: 18px;
+   margin-left: -630px !important;
 }
 .pff-li{
    font-size: 18px;
+   margin-left: -630px !important;
 }
 .external-link{
   margin-left: 0;
@@ -1125,40 +1146,41 @@ left:0;
   .careers       { border-top: 10px solid #0000ff; }
 }
 
-/* ========== Laptop Styles (992px – 1199px) ========== */
-@media screen and (min-width: 992px) and (max-width: 1300px) {
+/* ========== Laptop Styles (992px – 1500px) ========== */
+@media screen and (min-width: 992px) and (max-width: 1500px) {
   .company {
-    width: 100vw;
+    width: 150vw !important;
     height: 65vh;
-    margin: 0 auto 0 auto;
+   /* margin: 0 auto 0 auto;*/
+   margin-left: 0 !important;
     padding: 15px;
     box-sizing: border-box;
   }
  .labels {
-    width: 100vw;
+    width: 150vw !important;
     height: 65vh;
-    margin: 0 auto 0 auto;
+   margin-left: -100px !important;
     padding: 15px;
     box-sizing: border-box;
   }
    .social {
     width: 150vw;
     height: 65vh;
-    margin: 0 auto 0 auto;
+margin-left: -220px !important;
     padding: 15px;
     box-sizing: border-box;
   }
    .media-center {
-    width: 100vw;
+    width: 150vw;
     height: 65vh;
-    margin: 0 auto 0 auto;
+margin-left: -330px !important;
     padding: 15px;
     box-sizing: border-box;
   }
    .careers {
     width: 150vw;
     height: 65vh;
-    margin: 0 auto 0 auto;
+  margin-left: -570px !important;
     padding: 15px;
     box-sizing: border-box;
   }
@@ -1645,8 +1667,10 @@ width: 60%;
                 <ul class="lab-li-juice"><li class="who"><a href="finest.html">PureLife</a></li></ul>
               </div>
               <div>
-                <h5 class="who lab-snacks"><a href="brands.html">Snacks</a></h5>
-                <ul><li class="who lab-li-snacks"><a href="finest.html">PureLife</a></li><li class="who"><a href="finest.html">Taste Me! - Feel Me!®</a></li></ul>
+                <h5 class="who lab-snacks" style="text-decoration: underline;"><a href="brands.html">Snacks</a></h5>
+                <ul class="lab-li-snacks"><li class="who ">
+                  <a href="finest.html">PureLife</a></li>
+                  <li class="who"><a href="finest.html">Taste Me! - Feel Me!®</a></li></ul>
               </div>
               <div>
                 <h5 class="who lab-al"><a href="brands.html">Alcohol</a></h5>
@@ -1674,8 +1698,8 @@ width: 60%;
                 <ul class="edim-li"><li>Employee</li><li>Network</li><li>Headship</li></ul>
               </div>
               <div>
-                <h5 style="text-decoration: underline;" class="who edim"><a href="humanrights.html">Human Rights</a></h5>
-                <ul class="edim-li"><li>Human Rights</li>
+                <h5 style="text-decoration: underline;" class="who edim-human"><a href="humanrights.html">Human Rights</a></h5>
+                <ul class="edim-li-human"><li>Human Rights</li>
                 <li>Governance</li>
               <li>Stories of Impact</li></ul>
               </div>
