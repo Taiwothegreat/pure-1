@@ -172,7 +172,10 @@ body, html {
   margin-top: 10px;
   text-decoration: none;
 }
-
+.social-icons :hover{
+  background-color: #6ccb35;
+  border-radius: 20px;
+}
 .facebook-icon {
     display: inline-flex;
     align-items: center;
@@ -609,13 +612,14 @@ width: 300px;
 .pfi{
 font-weight: 900;
 font-size: 18px;
-margin-left: -3650px !important;
+/*margin-left: -3650px !important;*/
+margin-left: 0 !important;
 
 }
 .pfi-li{
 font-size: 18px;
-margin-left: -3650px !important;
-
+/*margin-left: -3650px !important;*/
+margin-left: 300px !important;
 
 }
 .car{
@@ -657,21 +661,21 @@ font-weight: 900;
   text-align: justify;
 }
 .lab{
-  width: 400px;
+  width: 300px;
   font-weight: 900;
-   margin-left: 50px;
+   margin-left: 180px;
 }
 .lab-p{
-  width: 400px;
-  margin-left: 50px;
+  width: 300px;
+  margin-left: 180px;
   font-size: 18px;
   text-align: justify;
 }
 .lab-hyd{
-  margin-left: -540px !important;
+  margin-left: -490px !important;
 }
 .lab-li{
-    margin-left: -540px !important;
+    margin-left: -490px !important;
 }
 .lab-juice{
  margin-left: -1300px !important;
@@ -1175,7 +1179,7 @@ left:0;
    /* margin: 0 auto 0 auto;*/
  /*  margin-left: 0 !important;*/
    margin-left: -100px !important;
-    padding: 15px;
+ /*   padding: 15px;*/
     box-sizing: border-box;
   }
  .labels {
@@ -1183,7 +1187,7 @@ left:0;
     height: 65vh;
       margin-left: -200px !important;
   /* margin-left: -100px !important;*/
-    padding: 15px;
+  /*  padding: 15px;*/
     box-sizing: border-box;
   }
    .social {
@@ -1191,7 +1195,7 @@ left:0;
     height: 65vh;
       margin-left: -320px !important;
 /*margin-left: -220px !important;*/
-    padding: 15px;
+ /*   padding: 15px;*/
     box-sizing: border-box;
   }
    .media-center {
@@ -1200,7 +1204,7 @@ left:0;
     height: 65vh;
       margin-left: -430px !important;
 /*margin-left: -330px !important;*/
-    padding: 15px;
+   /* padding: 15px;*/
     box-sizing: border-box;
   }
    .careers {
@@ -1208,7 +1212,7 @@ left:0;
     height: 65vh;
       margin-left: -670px !important;
 /*  margin-left: -570px !important;*/
-    padding: 15px;
+   /* padding: 15px;*/
     box-sizing: border-box;
   }
   .company       { border-top: 10px solid #6ccb35; }
@@ -2134,26 +2138,38 @@ width: 60%;
     nav.classList.toggle("active");
   });
 
-  // Dropdown toggle using mouseover instead of click
   dropdownTriggers.forEach(item => {
     const hasDropdown = item.querySelector(".dropdown-content");
 
     if (hasDropdown) {
+      // Use timeout to delay hiding so user can move to dropdown
+      let hideTimeout;
+
       item.addEventListener("mouseenter", function () {
-        // Remove active class from all other items
+        clearTimeout(hideTimeout);
         dropdownTriggers.forEach(el => {
           if (el !== item) el.classList.remove("active");
         });
-
-        // Add active class to current item
         item.classList.add("active");
       });
 
       item.addEventListener("mouseleave", function () {
-        item.classList.remove("active");
+        hideTimeout = setTimeout(() => {
+          item.classList.remove("active");
+        }, 200); // Short delay allows moving into dropdown
       });
 
-      // Optional: clicking inside dropdown closes it (e.g. on mobile)
+      hasDropdown.addEventListener("mouseenter", function () {
+        clearTimeout(hideTimeout);
+      });
+
+      hasDropdown.addEventListener("mouseleave", function () {
+        hideTimeout = setTimeout(() => {
+          item.classList.remove("active");
+        }, 200);
+      });
+
+      // Optional: clicking inside dropdown closes it (on mobile)
       hasDropdown.addEventListener("click", function () {
         item.classList.remove("active");
         nav.classList.remove("active");
