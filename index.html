@@ -2448,12 +2448,12 @@ width: 60%;
   .sos-button,
   .car,
   .car-p,
-  .car-button {
+  .car-button, .stay, .stay-p {
     width: 100%;
     margin-left: 0 !important;
   }
 
-  .com, .lab, .sos-h, .car {
+  .com, .lab, .sos-h, .car, .stay {
     font-weight: 900;
     font-size: 20px;
     margin-bottom: 8px;
@@ -3102,58 +3102,68 @@ width: 60%;
 
 
  /*New JavaScript*/
- 
 document.addEventListener("DOMContentLoaded", function () {
   const dropdownTriggers = document.querySelectorAll(".nav > li");
   const menuToggle = document.getElementById("menu-toggle");
   const nav = document.getElementById("main-nav");
 
-  // Hamburger toggle for mobile
+  // Mobile: Toggle nav menu
   menuToggle.addEventListener("click", function (e) {
     e.stopPropagation();
     nav.classList.toggle("active");
   });
 
   dropdownTriggers.forEach(item => {
-    const hasDropdown = item.querySelector(".dropdown-content");
+    const dropdown = item.querySelector(".dropdown-content");
 
-    if (hasDropdown) {
-      // CLICK for MOBILE
+    if (dropdown) {
+      // Mobile click only
       item.addEventListener("click", function (e) {
         const isMobile = window.innerWidth <= 1024;
-        if (!isMobile) return; // Only apply click for mobile
+        if (!isMobile) return;
 
         e.preventDefault();
         e.stopPropagation();
 
-        // Close other dropdowns
         dropdownTriggers.forEach(el => {
           if (el !== item) el.classList.remove("active");
         });
 
-        // Toggle current
         item.classList.toggle("active");
       });
 
-      // HOVER for DESKTOP
-      item.addEventListener("mouseenter", function () {
-        if (window.innerWidth > 1024) {
+      // Desktop hover behavior
+      if (window.innerWidth > 1024) {
+        let hideTimeout;
+
+        item.addEventListener("mouseenter", () => {
+          clearTimeout(hideTimeout);
           dropdownTriggers.forEach(el => {
             if (el !== item) el.classList.remove("active");
           });
           item.classList.add("active");
-        }
-      });
+        });
 
-      item.addEventListener("mouseleave", function () {
-        if (window.innerWidth > 1024) {
-          item.classList.remove("active");
-        }
-      });
+        item.addEventListener("mouseleave", () => {
+          hideTimeout = setTimeout(() => {
+            item.classList.remove("active");
+          }, 300);
+        });
+
+        dropdown.addEventListener("mouseenter", () => {
+          clearTimeout(hideTimeout);
+        });
+
+        dropdown.addEventListener("mouseleave", () => {
+          hideTimeout = setTimeout(() => {
+            item.classList.remove("active");
+          }, 300);
+        });
+      }
     }
   });
 
-  // Close on outside click
+  // Close all menus when clicking outside (for both mobile & desktop)
   document.addEventListener("click", function (e) {
     if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
       dropdownTriggers.forEach(item => item.classList.remove("active"));
