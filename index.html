@@ -2046,6 +2046,7 @@ width: 60%;
   /*  padding: 10px 15px;*/
     margin: 0;
     width: 90%;
+    
   }
 .lab,.lab-p{
   
@@ -2238,39 +2239,39 @@ width: 60%;
     padding: 0;
     margin: 0;
     background: #fff;
+    box-sizing: border-box;
   }
 
   .dropdown-content {
     display: block;
-    padding: 10px 15px;
-    margin: 0;
-    width: 90%;
+    width: 100vw; /* Full screen width */
+   /* margin: 0 auto;*/
+   margin-left: 0;
+    padding: 15px;
+    box-sizing: border-box;
   }
-/*.lab,.lab-p{
-  
-   width: 90%;
-}
-.com{
-  font-weight: 900;
-font-size: 18px;
-margin-left: 0 !important;
-width: 60%;
 
-}
-.com-p{
-  margin-left: 0 !important;
-width: 60%;
-}
-.com-butt{
-    margin-left: 0 !important;
-width: 60%;
-}*/
   .dropdown-content div {
     width: 100%;
-    margin-top: 10px;
-    padding: 10px 0;
+   /* margin-top: 10px;*/
+    margin-left: -250px !important;
+ /*   padding: 10px 0;*/
     text-align: left;
-    box-sizing: border-box;
+  /*  box-sizing: border-box;*/
+  }
+
+  /* Make sure one dropdown doesn't overlap another */
+  .nav > li {
+    display: block;
+    width: 100%;
+  }
+
+  .nav > li .dropdown-content {
+    display: none;
+  }
+
+  .nav > li.active .dropdown-content {
+    display: block;
   }
 
   .dropdown-content h2,
@@ -2283,6 +2284,8 @@ width: 60%;
     margin-left: 0;
     padding-left: 0;
     text-align: left;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .company,
@@ -2290,11 +2293,11 @@ width: 60%;
   .social,
   .media-center,
   .careers {
-    width: 100vw;
+    width: 100%;
     height: auto;
-    margin: 20px 0 0 0;
     padding: 15px;
     box-sizing: border-box;
+    margin-top: 20px;
   }
 
   .company       { border-top: 10px solid #6ccb35; }
@@ -2342,7 +2345,12 @@ width: 60%;
     height: auto;
     left: 0;
   }
+
+  body {
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+  }
 }
+
 @media screen and (max-width: 991px){
    .dropdown-menu {
     position: static;
@@ -2450,7 +2458,7 @@ width: 60%;
     position: static;
     width: 100%;
     padding: 0;
-    margin: 0;
+    margin-left:0;
     background: #fff;
   }
 
